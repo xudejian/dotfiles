@@ -1,0 +1,100 @@
+{{alias}}
++crunch-all-cookies = +crunch-incoming-cookies +crunch-outgoing-cookies
+-crunch-all-cookies = -crunch-incoming-cookies -crunch-outgoing-cookies
+ allow-all-cookies  = -crunch-all-cookies -session-cookies-only -filter{content-cookies}
+ allow-popups       = -filter{all-popups} -filter{unsolicited-popups}
++block-as-image     = +block{Blocked image request.} +handle-as-image
+-block-as-image     = -block
+
+block     = +block-as-image +handle-as-empty-document
+shop      = -crunch-all-cookies allow-popups
+auto-https = +redirect{s@http://@https://@}
+
+polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
+goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
+tor = +forward-override{forward-sock5 127.0.0.1:9050 . }
+direct = +forward-override{forward .}
+local = +forward-override{forward .} -block allow-popups allow-all-cookies
+default = direct
+
+{default}
+/
+
+{local}
+127.
+192.168.
+localhost
+.moode
+.daogou.net
+.douxiu.com
+.moode.cn
+
+{direct}
+.youtube.com
+.youtube-nocookie.com
+.youtu.be
+.youtubecn.com
+.ytimg.com
+.google.com
+.google.com.hk
+.googleusercontent.com
+.googlecode.com
+.googleapis.com
+.gstatic.com
+.goo.gl
+.channel.facebook.com
+.ak.facebook.com
+
+{+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
+.google.com/url
+
+{+fast-redirects{check-decoded-url}}
+frd/http://
+
+{goagent}
+.blogspot.com
+.blogger.com
+.c.youtube.com
+
+{polipo}
+www.pandora.com/$
+.pandora.com/radio
+.hidemyass.com
+.sourceforge.net
+.nokogiri.org
+.wordpress.com
+.check.torproject.org
+.appspot.com
+.twitter.com
+.t.co
+.twimg.com
+.tweetdeck.com
+.igfw.net
+www.skype.com
+.chinagfw.org
+.debian.org
+
+{block}
+.doubleclick.net
+.baidu.com/cpro
+.atm.youku.com
+.lstat.youku.com
+.stat.youku.com
+.dcads.sina.com.cn
+.adsunion.com
+.googlesyndication.com
+807.tianya.cn
+806.tianya.cn
+cpro.baidustatic.com
+.cnzz.com
+ggmm777.com
+images.sohu.com
+.admaster.com.cn/i
+.atm.youku.com/crossdomain.xml
+.sina.com.cn/crossdomain.xml
+.tudou.com/tdcm/adcontrol
+.google-analytics.com/urchin
+.cnbeta.com/.*\.js
+img.cnbeta.com/[^/]*\.(gif|png|jpg)
+da.feedsportal.com/.*\.img
+.baifendian.com
