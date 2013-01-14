@@ -93,10 +93,31 @@ Bridge 178.32.62.36:443
 Bridge obfs2 54.248.132.125:52176
 Bridge 95.236.3.164:443
 Bridge 94.21.75.218:9001
+Bridge 81.191.49.222:19991
+Bridge 87.167.248.28:443
+Bridge 95.222.249.139:5050
+Bridge 74.214.58.132:23513
+Bridge 85.214.158.217:443
+Bridge 76.10.151.59:9001
+Bridge [2a01:238:42f7:9800:9647:88d:1089:f1f2]:443
+Bridge 87.167.252.31:443
+Bridge 79.51.119.188:443
+Bridge 74.207.240.149:465
+Bridge 5.178.71.96:443
+Bridge obfs2 54.247.0.43:52176
+Bridge [2a01:e35:8a88:8a30:ca60:ff:fe04:801]:443
+Bridge 94.214.99.209:443
+Bridge 81.29.250.221:443
+Bridge 196.28.5.162:443
+Bridge 176.34.160.183:443
+Bridge 209.205.86.227:443
+Bridge 66.85.184.130:443
+Bridge obfs2 176.34.160.183:52176
+Bridge 94.21.93.17:9001
 ClientTransportPlugin obfs2 exec obfsproxy --managed
 ControlPort 9051
 ControlPortWriteToFile /tmp/port.conf
-DataDirectory /usr/local/etc/tor/data/
+DataDirectory /usr/local/etc/tor/data
 DirReqStatistics 0
 GeoIPFile /usr/local/etc/tor/data/Tor/geoip
 HashedControlPassword 16:39541DEED4A8E4FB60B12309078076D2B1A21711EFE304266D5312B562
