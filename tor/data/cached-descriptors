@@ -1,161 +1,14 @@
-@downloaded-at 2013-01-12 04:56:09
-@source "108.170.138.61"
-router ieditedtehconfig 81.2.197.33 443 0 0
-platform Tor 0.2.3.24-rc on Linux
-opt protocols Link 1 2 Circuit 1
-published 2013-01-12 02:39:42
-opt fingerprint 62CF 34FF C605 4B3B DB4B 6F55 C4BF BA77 1EC0 7E70
-uptime 2199831
-bandwidth 819200 921600 1001515
-opt extra-info-digest 0EB2B9015C8D8A9A50046CFAF06160BBD082D2AA
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAKYzeSspP8Kkni7qiEC9mW/NKzGe2kXVx/4zSfsVmgIeDTCpDejCP4EG
-rWx4uZ50zdYKnJrKY5BbKhpv9KVeGeGqXBxNooshDhT/R3BNL5cj4c+L/HgUzBav
-PKMzIGec8yIDtzDJHIykgKPSW2DXarEv+o2nkg/l+1EEaN5mpa21AgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAL7aenOXqiLyg0YJ04ODNE8OA3b80qBRsCupF2fs9xyL7a+6sNQiJFeP
-dpl187yVJ9z7WrP21KMKTA2Bg9FY2kSA/tA90QWijtO6FTITubyn3VUUMgSBtFvS
-28dWGs1eopEMogl92LWAFGGKTJDKEfmvfOWZ/cUN+pdgkZrnoqFlAgMBAAE=
------END RSA PUBLIC KEY-----
-opt hidden-service-dir
-contact fondo777@gmail.com
-reject 0.0.0.0/8:*
-reject 169.254.0.0/16:*
-reject 127.0.0.0/8:*
-reject 192.168.0.0/16:*
-reject 10.0.0.0/8:*
-reject 172.16.0.0/12:*
-reject 81.2.197.33:*
-accept *:22
-accept *:23
-accept *:80
-accept *:110
-accept *:143
-accept *:443
-accept *:465
-accept *:563
-accept *:587
-accept *:993
-accept *:995
-accept *:1863
-accept *:5050
-accept *:5190
-accept *:5222-5223
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-YLaH8PZIYaM6FMIY+wCobxGmmH1em2ajF6HBC0FpnHEDyG3d/ufOviiYWfmatn0G
-KDx2HcZLVkYglllj5HegXv5cykW0XyY5TzNeVoJzcWlxtNcTtRoJWVjGluItEKxO
-7E2fR0zV6sVnGI534ru3O/4aErusFjUMKdixjH/oHZY=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 01:10:40
-@source "199.241.31.96"
-@purpose bridge
-router omgwtfbbq5 199.241.31.96 443 0 0
-platform Tor 0.2.4.7-alpha on FreeBSD
-protocols Link 1 2 Circuit 1
-published 2013-01-14 00:15:32
-fingerprint C9F3 803E AEED 4D00 9F47 6269 08CC C254 8094 FBB5
-uptime 555710
-bandwidth 786432 786432 563208
-extra-info-digest F8EBB5762B49A676EED59523F6654010B59CFD5B
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBANrRd7P0taJuML4CsSOcRXVPA54JGv8KrB+LEQ3qCEAXmHJawm5yJKCx
-fWWW2R9cqL0X1vKO3Y8PiUHj24RomBBcTlAdwPeiiHxalhl4mOrNHsJvTowbJoj4
-frCxUK8WtvsiKyuXPg4X9p3oMiLogwxrDq85+S0h7z1XR0w4KpFlAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBALP72f4LINQ64oaXiNM8qtDEjFgzhH055YM+p7A6k3b+q71UluM2RYMz
-mdejLuvq1FlPLmCHGKP3ce4xsKFVFdYtZy0LQHU7JN1b9l0ynChP8IvJwyZOBYkc
-o3xK/hDF8wKpbJgjYwkAWs5/XZ/rV4aPupGcjnytwJET0kbEZd9zAgMBAAE=
------END RSA PUBLIC KEY-----
-hidden-service-dir
-contact 4096R/759CDEC0 aoeui <aoeui AT riseup dot net>
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-VLCh+YzyKholWkbGc2u1vYUW5kXO/cf67GCW4TGpN6zsNBQJOHsNlVxbsMIyI4re
-a0SCxtRg1yCSVwuZl8VcQwvoxZQ03p+qJrtUpquojoOSIV2BIYEuDODtd/nTYO0J
-tTkDt9Y4AcekSqDXKM9uU5sJ0PflZyb0/jlRjfe9GJI=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 01:10:41
-@source "79.51.119.188"
-@purpose bridge
-router Unnamed 79.51.119.188 443 0 0
-platform Tor 0.2.4.6-alpha on Windows 7
-protocols Link 1 2 Circuit 1
-published 2013-01-14 00:16:20
-fingerprint BCE4 0BB9 926A CA81 7FD6 4691 E3E1 EEB3 25A0 963B
-uptime 31509
-bandwidth 5242880 10485760 26624
-extra-info-digest 520C288FF1E083C7D05EE882E5CCA443D94DD385
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMwN0nahh7pkJuZ6lOqsOcwrKkpKa2AfVws/IBa7uX9Tc270tz2ORBIO
-zkNzbqCeC9PjK5oCVqU5QrixHq7WwsqtmV2ARhgK+OG8+vERgXumiSyEgOZtOpGJ
-pBhhmvhEdpwgMj86F8oWNQA6rE15svM1cA8/mlfsDQAZMrSBdH5FAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBALhDKYxgfX0kjFTWP9nIrppmw5KGyw11OEeqLTXpLkxNRnw0v0Wg8lcX
-5uRrUWdIzW2q5ckBotbuDCFTK8MWknpv9WMn04fFacxt1wu02CtcSByvgpedkQPB
-RpevBfZb2Dx3pYJ0coYZfBce+zuyPBKbP/7YYPcUGlJ9Ji/doFt3AgMBAAE=
------END RSA PUBLIC KEY-----
-hidden-service-dir
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-KeDENUa87kw7VqTauQVZACIse//rtQ+GBfxcmZlisfw1jglAS+Y+ltKsQS8yRzCw
-GmHBAx+ImZtxwMGGNRLtZgy8U5Mkpnn+u9iRKq2KMwGPwPPHJJg+mH01D4VidUDh
-w+joqTZVevi0fuzn0AyvBYKofUxh4S2glgEsdetCSPY=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 01:10:40
-@source "50.17.12.150"
-@purpose bridge
-router ec2bridger71fb8311 50.17.12.150 443 0 0
-platform Tor 0.2.3.14-alpha (git-fd7f77622fc174e2) on Linux i686
-opt protocols Link 1 2 Circuit 1
-published 2013-01-14 00:29:26
-opt fingerprint 6AA5 6BCE 5DE2 F08E 4736 1F66 A06B 9E08 90F0 D702
-uptime 6675754
-bandwidth 5242880 10485760 185251
-opt extra-info-digest 51587F2D313C6FC2B8FEABD8D37EC5E0FFD1D9E6
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMa92s2pjKvou0dyLal7WrwH/LTWCbbEs6B3iVxeTFeyxhiSWt1R5PT7
-gSrnMjqiYmGYp7gg+d05xitRseJwvfJQqVtTOZA4XhgPrKeEo4kGCIxjzbRBTncG
-jgaOH2jo1t3+SEWyhzvnomUWBq/gZOIPLVSGxgY0N/3Jaiqp8dePAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAKytyIs10dv9xuVf2cdEM65lz+6/Oi93ESnMnYl8Jf87TxFQv90vPf/K
-Q/EFmuL/DYXAmF3mX68S4KwHMRu0oOtgavV5czQgdRYBoDhUwbinUMref2GooJC/
-06178K/9kqDWDZMh5Ez5cALkA5/9+OWe/0E3k6gKIZyLhnJLSbH5AgMBAAE=
------END RSA PUBLIC KEY-----
-opt hidden-service-dir
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-mCXmWdBOEGT3wOWJ9TfeOPJLLFqBN3qJgp8v486UqF/ytjTWQfYELL4GfPsqyuh0
-kCGbZhC1iaBk1pjrYJJj62mMk2aRZOkGEX+58E8Lpew05PGLfrXy8Wyuw0ESZ52Q
-zSgulg7PMjilOCuhng6P4JxYgopIf0u3xRBjaD+nQA4=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 05:14:03
+@downloaded-at 2013-01-16 16:25:39
 @source "74.207.240.149"
 @purpose bridge
 router BarkerJrNAUSCAA2 74.207.240.149 465 0 0
 platform Tor 0.2.4.7-alpha on Linux
 protocols Link 1 2 Circuit 1
-published 2013-01-14 04:56:45
+published 2013-01-16 16:02:28
 fingerprint 4DB3 81F6 CFB4 4FDB 6F50 1DEE D556 617F EF26 FE75
-uptime 1042081
-bandwidth 1073741824 1073741824 358806
-extra-info-digest 61D7D1BBF309F12D39E82212C55FD5B09D03B242
+uptime 69784
+bandwidth 1073741824 1073741824 781425
+extra-info-digest 1993E28BBC76EEC704E27031C9D9FFBD36F45F71
 onion-key
 -----BEGIN RSA PUBLIC KEY-----
 MIGJAoGBAOKJALRL+JiTyNUd0cciOhfC5NK0xWDpSimLfYp/gxfgLnNh7L8tJZ2O
@@ -173,194 +26,211 @@ contact BarkerJr <http://barkerjr.tel>
 reject *:*
 router-signature
 -----BEGIN SIGNATURE-----
-JhUcMwc260nopz9CruLOv5nvtxfZz9jOwGQu87DgdTjfCkRsQTTgqP+CoMnls/V0
-7oyqa9NjPi88VPK8fgeeWmpb6+g4aXcWYKlyOCjBLdPeaRhJYafAygFupAH/qROr
-aQrwULlC3gujZnvwCPXu4NPLgQjf0RdQHekQaMOS+mE=
+ZS4xpzoL15oYdzzv84neQK71I9OP8p+cZlM1OMDwN3WbcP1zdXYjpDdSmkVBj01F
+qd45nwhMHij8WAtnfCIk3s7Z1e+NNZbBO9QdGG9T+7rFJSogf/zoxdLCEs13VWxY
+UqepJW9T9ZKlWHykl8rXB4blWkz+X0nMlpeWkT/l/A4=
 -----END SIGNATURE-----
-@downloaded-at 2013-01-14 07:27:45
-@source "94.21.93.17"
+@downloaded-at 2013-01-17 01:20:47
+@source "64.79.111.18"
 @purpose bridge
-router Unnamed 94.21.93.17 9001 0 0
+router Unnamed 64.79.111.18 443 0 0
 platform Tor 0.2.3.25 on Linux
 opt protocols Link 1 2 Circuit 1
-published 2013-01-14 07:20:51
-opt fingerprint 1D2E 168C 3FC7 D707 8FA2 765C CA3B 6395 AE3A BC45
-uptime 22021
-bandwidth 5242880 10485760 75776
-opt extra-info-digest 4505ABEABC05D211CCC8FEBB312EE50E1E22E86A
+published 2013-01-17 01:10:23
+opt fingerprint C9D2 F50F 92B1 D287 2AF3 7539 4FCD 1649 6477 593F
+uptime 1438016
+bandwidth 5242880 10485760 530936
+opt extra-info-digest D457385DE5823D8996CBDFB497E050C81579F28E
 onion-key
 -----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAK5ne+NLJukMWuXRwHpAphESbkXSzeQlpeXZCkOn2uvDBe2mKkSB33Lh
-DrbCJ1KVzLSE2Ih9tsTPPfEQbXOH5Ky8oHx3pINqd2/Mv5M8D2iaRC6XJhdLy8gA
-WXBhZWnUtB5Jh5N1UR/xNax1i0FZv6/NKfQkVdcj2jwbF2WYnO4lAgMBAAE=
+MIGJAoGBAMfRCs02yClG1POb2+uqOnevIjG+uFuuogOHbjTXgIuTzDk5Itnehwiy
+GIgaCrchGlly6EqMml6eKiOdPOlKIbvjng5Yk3oEmcnGKHrM2jrNwlv9RAEyEfR2
+S4Ooeo/Yc9LiQZIRD68hkFq+oQZEr5iP91VOzx6KYw+QKZnfa3KjAgMBAAE=
 -----END RSA PUBLIC KEY-----
 signing-key
 -----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBANTWFGjc3KQhGB11bUNgICvS+x9KT6sqQc2yE2+H/ndK1GJI+wgbobDz
-RlN3Ig6sRphamD7DiSB2nOsjxtwztPEomhXHlaHtViHAU5pPe0jhU95TLihzd5Iq
-RxsXEMPGCHl13sHWJKYj5xo3ceQL0Mf9Nh9O6L28dav+D8Qyw8XpAgMBAAE=
+MIGJAoGBAMRns7G+hkiHL2pjIag07SWUeNCRY8YBwpi0NgDp/AxE0eemyWEfXZVa
+efSben6I09P8WaqYPs6MfN97vwmCLz+VCRJ7C5EPwLVlF46Hprj7HqDDXduyCknr
+1DT3erhyEZ7VWDEjpdkLGo8W/WsK5NFkQpVwgYk0wv7vC1yb+FgDAgMBAAE=
 -----END RSA PUBLIC KEY-----
 opt hidden-service-dir
 reject *:*
 router-signature
 -----BEGIN SIGNATURE-----
-TEJKYihdDSfc/jhZe8Fm9Js7yJgTtVHMG6g2ufjj03IdwjOZhHQT7wVN26SJFNjW
-FpkxCFg8NvPHNQdF+fd5AR5Bs1XkxDkbP3Mnf+ROsstv4toaNHVgsH5vagUTGP45
-DiJVfUY01cfTyJ7LTze5bHmpJgEqRGX5s8v0Th59c9A=
+P4VGQB6a8oTHhVYuvLe0In89r9Sb3w79LnhzbiMNmQ711Ncp0UqlAr/ilIw2A0uu
+p5b8TtfF6aCrAdvXfrkv+I5BuR74h2mQNw14yIKd/oayuPoTIGDlYyL0BHjlKbnF
+bnozJ9Zk5gbmT63hnm/JeoSYNBdhbHzecjGIcJPToDc=
 -----END SIGNATURE-----
-@downloaded-at 2013-01-14 08:59:09
-@source "54.248.173.160"
+@downloaded-at 2013-01-17 04:49:37
+@source "94.214.99.209"
 @purpose bridge
-router ec2bridgera8518dab 54.248.173.160 443 0 0
-platform Tor 0.2.4.7-alpha on Linux
-protocols Link 1 2 Circuit 1
-published 2013-01-14 08:46:59
-fingerprint 0060 3F31 9185 5708 591D 97D5 9C73 13D6 EF8E B763
-uptime 1561792
-bandwidth 1073741824 1073741824 18754
-extra-info-digest B665FBF2ED9511016C6839BABA5A960D69762254
+router Unnamed 94.214.99.209 443 0 0
+platform Tor 0.2.3.25 on Linux
+opt protocols Link 1 2 Circuit 1
+published 2013-01-17 03:19:36
+opt fingerprint 2155 EFB7 EDA1 6888 CC09 3D09 E205 4DD2 6B8C 54AE
+uptime 1571482
+bandwidth 5242880 10485760 211224
+opt extra-info-digest 4101C560117C9F38E88D469A189336F6202830B8
 onion-key
 -----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBANUqXx1midpeOJIOwrb1+02T/s6zidD39iq00I2WwkD8kcmrCUKPccTa
-EiU88HabgArcuUWURueQ8k4aT7A/Zv59+zFL/UI7hgEf/FaMiN4jn4xEnhCqCLsS
-43T5Vdeyn/krDWLrcnAwP3dbTcl+E/hoSwyt4Vs5cOn1aRiYFKQRAgMBAAE=
+MIGJAoGBANwlXLT3/YCIApvj8eDtpBWcuSSo1gRXqWXawbmyelniKdDHjzjmDt9K
+gR8IIi//YSd/fnnxq2+DX0YD3X9wEi/AIF6atZ0lMhXcUZ6Z29p1J9pWFdhJgsUQ
+Qi8nbcqSf8E45JiDE1WH7Q78GLfxzrC+cMgj7ZIVuYir+/edZoW9AgMBAAE=
 -----END RSA PUBLIC KEY-----
 signing-key
 -----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBALhl6ImHz8CZjFs2p7BHWzRhVvgRPyZ5IRSLe9T9Wv+V9L1pE+pL4pOK
-2UE0Pt1NLUmprmmlOaeQDkwkgMSROzSRRgQaqN1AoJlY5C7goEyngCaZ4YG1f3l8
-1j6ZNyW7yXVxhFEHjUYeN5WQGNIdeIM/RWOHInm7jdJrstjVY4vHAgMBAAE=
+MIGJAoGBALUol2br588kk0X2aqRu6VqD1Gw70DQzNqkP5w9k9Q9z9aIz176iColO
+46ESR8Sq3Oo+uRoa2L1OeZg+B+ZGq/SlWRnCRRLE7+vrHE4FkRmZFT7u2IIBMgBi
+ZEYOxnXEUQvjEbYAgxRnc3lL3NgXpNkvtwkNDPE4TaIa2cnCs2YFAgMBAAE=
+-----END RSA PUBLIC KEY-----
+opt hidden-service-dir
+reject *:*
+router-signature
+-----BEGIN SIGNATURE-----
+nQuHqN4MCLKFkiBP25wsd9v0G73j8b0MyKrdJxd5yzEDDGYIF8ZwbSQ79rX6mI3t
+xzme1qlnNrYzQ21g+BUXbCAmMw16OGSIPrDzeBORjyY/qjjMd+hnicTUo1y4RGqw
+/GquWgVANEa67fVqT8Cxo6ktgI1pvkLlURsogrU/Oag=
+-----END SIGNATURE-----
+@downloaded-at 2013-01-17 07:19:29
+@source "74.214.58.132"
+@purpose bridge
+router Unnamed 74.214.58.132 23513 0 0
+platform Tor 0.2.3.25 on Linux
+opt protocols Link 1 2 Circuit 1
+published 2013-01-17 06:10:04
+opt fingerprint 28E2 332F 4EB3 0585 4F1D 1C47 CEA4 4F8C A6BF 975E
+uptime 1601433
+bandwidth 102400 102400 111918
+opt extra-info-digest 4F2A1C61ABAEA886F2202FE320C06F07175D9B92
+onion-key
+-----BEGIN RSA PUBLIC KEY-----
+MIGJAoGBAM6//hus3BWqjnB+vaGWdd/Ncl2okTH9mtAGszZHAXnmG9eqPUMHmG9v
+QvkFkWpXoOFbpDIhTfzBx9sFq0kISiNCH+irPVRwKHznTzKc4e6kUHs/EVjLV/Ie
+NBBxSdQTZ226XRVhlEOQdcoaRGYuP2fyLljw0H2Hbs7VDpaXpPRHAgMBAAE=
+-----END RSA PUBLIC KEY-----
+signing-key
+-----BEGIN RSA PUBLIC KEY-----
+MIGJAoGBAMIdl0gJ/YzxfgEavHx8rH+pvVfiaQ41M3GwrwI4ZEiuqlEHJvI3JpCi
+b2juRLX0xxurAOKi13lyXwa3kiH6ZxElcJJmDIboyqgahTQIQYPUk7l8lp1R2FHe
+4evAF79MyEuz5Mo1R7VJGCawHy0Ms22I1VmnSgDMqR6kARFmPyZNAgMBAAE=
+-----END RSA PUBLIC KEY-----
+opt hidden-service-dir
+contact hobbz@dodds.net
+reject *:*
+router-signature
+-----BEGIN SIGNATURE-----
+SzRIqKA77wK7g4Uq4j9dbWQjiXDza3/6X4LMgkMrmpKEmV4lwIR487F4rTAixFmi
+b9Of4kYbsiJYIOo56V557ONNE8xgy26irbnggT0phZOcmoj4c6c47Q7qIMT+BVxe
+lU9G7YYR8eeENZyisvFjIv9yISJF82uvY5yjcJlYOKM=
+-----END SIGNATURE-----
+@downloaded-at 2013-01-17 07:20:47
+@source "178.32.62.36"
+@purpose bridge
+router setecastro4 178.32.62.36 443 0 0
+platform Tor 0.2.3.20-rc on Linux
+opt protocols Link 1 2 Circuit 1
+published 2013-01-17 06:26:40
+opt fingerprint A179 F2DB 3757 41EF 93B7 051D C135 CCFD A595 C795
+uptime 13531345
+bandwidth 5242880 10485760 359812
+opt extra-info-digest EF808F5BD29DE1465570D3FA8B0527F2A335530E
+onion-key
+-----BEGIN RSA PUBLIC KEY-----
+MIGJAoGBANd3TZIDJe2rAX/37e4NnrMH20xeC8w7g/S74HMDpiSjQjXG+Sr9z2nx
+40dNtOEN2S3tQE5fm2bzIr48PRA8wCslECUv/2UdHDway9TEbumJKURhI7+vauDC
+wKfrnX6Y8WH5YyM42MdC9z2upfdnjkN67kzaSO39mKvAXpDuVZCDAgMBAAE=
+-----END RSA PUBLIC KEY-----
+signing-key
+-----BEGIN RSA PUBLIC KEY-----
+MIGJAoGBANtFZuwaw07muQpswg3aKsnCppjhzEY0ZPh8WdONtjBrDeTpzmtTgV22
+NObnLi74d9jlWkgZoK7uWjIQ2LRoc7uXDuAFqyxQH3rhLDYdoEYW9faLYNyxrxBB
+Xt5AN6bnIRn73dyN7iAVJGxCUqDxtfaTgUGakiTE5oArZnJWMVuTAgMBAAE=
+-----END RSA PUBLIC KEY-----
+opt hidden-service-dir
+reject *:*
+router-signature
+-----BEGIN SIGNATURE-----
+YRjSBAz2993JVHWP/iZKTOKXqKOSA2+GrPXtN7mx8DNnInjqHp3kydJv5EdFkxb/
+lY7VYqlC4JcLo1FqnVmaHuFtqO95idhxi4reSsci7Nr1ww1aZhYitBAbPHARgDl2
+cbFvPdoVIKEkM1HwP1wzVhx8bYHhjeE1qoEB1aIiq04=
+-----END SIGNATURE-----
+@downloaded-at 2013-01-17 16:56:02
+@source "199.241.31.96"
+@purpose bridge
+router omgwtfbbq5 199.241.31.96 443 0 0
+platform Tor 0.2.4.9-alpha on FreeBSD
+protocols Link 1 2 Circuit 1
+published 2013-01-17 16:49:42
+fingerprint C9F3 803E AEED 4D00 9F47 6269 08CC C254 8094 FBB5
+uptime 80093
+bandwidth 1048576 1048576 147067
+extra-info-digest A9DCE9EFCB394E0629C717826294CE37E90D29B0
+onion-key
+-----BEGIN RSA PUBLIC KEY-----
+MIGJAoGBAJWcnUZd6sMi0lQ4k05ITVlfH38Dt5gh6fOxNeyme5LQ1g3FYMzJLfRi
+k1FocOtsoYybdKg6snVWC9ILeD/BSqVzQf7ucwXukH2IdwZKOIxYT12xxD+rcCvn
+yQdkdzIhLEizyFQhhsSg9ve11jPAqxsmkrFhZNAHy8Jw38zjIHVJAgMBAAE=
+-----END RSA PUBLIC KEY-----
+signing-key
+-----BEGIN RSA PUBLIC KEY-----
+MIGJAoGBALP72f4LINQ64oaXiNM8qtDEjFgzhH055YM+p7A6k3b+q71UluM2RYMz
+mdejLuvq1FlPLmCHGKP3ce4xsKFVFdYtZy0LQHU7JN1b9l0ynChP8IvJwyZOBYkc
+o3xK/hDF8wKpbJgjYwkAWs5/XZ/rV4aPupGcjnytwJET0kbEZd9zAgMBAAE=
 -----END RSA PUBLIC KEY-----
 hidden-service-dir
+contact 4096R/759CDEC0 aoeui <aoeui AT riseup dot net>
+ntor-onion-key ONNuJ21rC3o8xQLyZEFDJVxe4CdpaGOYQ7ChW7HeXTI=
 reject *:*
 router-signature
 -----BEGIN SIGNATURE-----
-h8xpEeMiqrr9+HnGo67E90jolHciQFNE/ZqlrXz/jNFGj24265VTic1teGCHHeIq
-cnt3+ahWiT6gwTLgpC3Ag7LGRwJ0FwKM+w4ovOcZ1qZgbgorQ9Nhrbhu6d2CeqNG
-PQf9k7w/Q2Nxv636+nYFVdSDqrxjq9urO3SnpGhsFWY=
+M8vyd7mGiQGYs/VnGlyyh7qQo/SND3Y0SNA/PbeJooXBPZNzZYG/O3+dD1GvOhfQ
+Ziz2uW4enGoGmF+oBzVgVA8hPu2VhnRFJUazFLW7U5cDxheK9BA1BPvvVPnA2CWF
+v06SkT/QHaAn8xuMhwOPOBCpSw5U4E+09JAQ0Fws3Zw=
 -----END SIGNATURE-----
-@downloaded-at 2013-01-14 09:30:14
-@source "108.170.138.61"
+@downloaded-at 2013-01-18 08:06:45
+@source "64.34.218.57"
 @purpose bridge
-router Unnamed 108.170.138.61 4090 0 0
-platform Tor 0.2.3.25 on Linux
-opt protocols Link 1 2 Circuit 1
-published 2013-01-14 09:16:17
-opt fingerprint 8E3E DF35 6908 80F1 212B F785 835A AC25 2894 4A82
-uptime 32628
-bandwidth 102400 204800 45056
-opt extra-info-digest 183553F8AE3F5576BA9022FB498B570236B3BE72
+router rem 64.34.218.57 443 0 0
+platform Tor 0.2.4.9-alpha on Linux
+protocols Link 1 2 Circuit 1
+published 2013-01-18 07:54:09
+fingerprint 8D91 A33D 4946 E0B3 9783 6168 9DC9 1933 63C9 55FE
+uptime 59968
+bandwidth 1073741824 1073741824 455680
+extra-info-digest 007790D2D62F9805B0FF90E01836C7D717EBC47A
 onion-key
 -----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMusP0w+AKZtINdVLZLm0N0P14QSgxqszwuYGz+SiCVLanQ0i2YpqvvA
-EYVG40qny7CbyBHRLoAPkiKk1dS2p2gu4ZlnOmwzUl+I9QuYSBl4/FoZ9synvEw1
-ZAYVMwnAjd7rSfGFscjJc63miFhIRZsIC0EInKX/DYVGRLhlQP9FAgMBAAE=
+MIGJAoGBAMe9G0FvmFCqS8utHUOqL7PiSOEWRi7o/Cp08bGK/wu3/E5cp56QtOQd
+7DaX/hGGcL0AsREPYVmyo2tJvpo0/1fLv67R5OC0xiYqsKmFnWKCXzuUdkPvjYGU
+wGL+MMhKY4OfJlgViv84w3eWHFZqdb7DzhhO1wCH1S+8u3u41sVDAgMBAAE=
 -----END RSA PUBLIC KEY-----
 signing-key
 -----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAO1E31O3eixPYGozthhXOD2Ck4O5wW4lxXCbNEg/hoafAp21QuXgRVI6
-NRZretMqSmL9ddVXvJOPF+932PO/0J/cRUKfY3fTE1r28HE1LdEeYhYEOf/fb+Zz
-WeqHCo7y/eQzccl9UDVbEZdrNIhlMZOelUYP2xl8a+yIeDqRz/RpAgMBAAE=
+MIGJAoGBAMnR+2w4N5YKzbWtYJAf5zNB2o2RdNFSNm3u6ap5LzV4kYo8gujI1iY8
+vzja6Hc6fkXLeeSA4q+eEsFdw/bAigW51sIANxYNBFYUy/yNVC5wPWstsBatsAqM
+Msl2NCsYdzmQI6LgK9oEl0Bd5Qe6jEYISVDfyy/NAKk6d4sJ9YWpAgMBAAE=
 -----END RSA PUBLIC KEY-----
-opt hidden-service-dir
-contact keverets <keverets AT gmail dot com>
-reject 0.0.0.0/8:*
-reject 169.254.0.0/16:*
-reject 127.0.0.0/8:*
-reject 192.168.0.0/16:*
-reject 10.0.0.0/8:*
-reject 172.16.0.0/12:*
-reject 108.170.138.61:*
-accept *:20-23
-accept *:53
-accept *:79-81
-accept *:443
-accept *:706
-accept *:1194
-accept *:2086-2087
-accept *:5222-5223
-accept *:5228
-accept *:8080
+hidden-service-dir
+ntor-onion-key kyE/B5KdzU7Atf2ykVkMQ491WGneOFF578FYb7lf+2k=
 reject *:*
 router-signature
 -----BEGIN SIGNATURE-----
-yul7Jc2S0u6M8/nNOC8dKTqYDVmMgTKEs1E90nCwlsy0CfBZ13aOnIFcY9EcMZLX
-MvC8tR1+L4Ucwo4MNw+4+7PkGj0s6EnlKsUvC6BlhM8+29bOSvxqq1NSBty26GEL
-lvidlKgOr+fKS1Mtf7CUxvZX4bjm0/8P3Lscvv5ZUnk=
+R+3/vxUK3ivHw7PgDjrWRH8IKQBTCTYRE5h5wG2hifSHS8/vwkV4q+0LnCkHN4pf
+jVWwO4TWbTcgzZ6RfvCcUbsNvyXY6RXLd5Vff+m2BpNfsj7PGtO5BT9BUb1xOt32
+2i0Qv0cE4KI2/s7D9RblF6+dhQzBHsIozuBtDiAMZCQ=
 -----END SIGNATURE-----
-@downloaded-at 2013-01-14 09:29:54
-@source "69.251.251.192"
-@purpose bridge
-router Unnamed 69.251.251.192 4443 0 0
-platform Tor 0.2.3.25 on FreeBSD
-opt protocols Link 1 2 Circuit 1
-published 2013-01-14 09:16:49
-opt fingerprint B008 544D FE4D E4C0 D59C E685 E0EC D0E7 1851 66FC
-uptime 210998
-bandwidth 5242880 10485760 9645
-opt extra-info-digest 8EAA6EA62D91117F3C7AB4A6E25522CB37A0A56C
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMirWGchFjuB+xM9MksZnNJ3Bea09YnCH/JpcwAWPq4W8sFUiqXy4QMr
-g1SZnps5sUwg8jAW8sOL2h4bIcatG7Bff9MO1C7WFcmee+jCIYMx8c7kTcqVxKWA
-QE2QLktpvJDSVg86Fps/2z7Vm1DQ0G7NUXpbCeJDf0jxmqQcpY+LAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAJdOF4JTzeH+Wut6OIZb0+73msXE7Iyh94QSaxXS8CtzhQCANP1GRlZY
-gl1sjnzA8aCVj/MtnNWdjNhUjCzmWOVHWhRfMiDQkOvOlNy4DSJYLk1+lW8x/xu0
-nM6Gy7OEdPK6pNrmzbh7BpMHxmyPt/udqUpGDJPQPLm0rbz8EcRNAgMBAAE=
------END RSA PUBLIC KEY-----
-opt hidden-service-dir
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-W5u45n1G2niFEQy+FhMUXDwLCkV2L/8z1CQv/iCLbrI/hj/VibHHx1YIvaUPiazf
-kjdVPfW6eLNNpJ0RlIt6zrPw2NHLRr2ntjtObGSBfrziLBZRaZTOSe4N/zZgKZnP
-8PjDMwKJtfAbK9SOVz1MT34a5c+8dtudHxgSpZrF6YY=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 09:46:56
-@source "5.178.71.96"
-@purpose bridge
-router Unnamed 5.178.71.96 443 0 0
-platform Tor 0.2.3.25 on Linux
-opt protocols Link 1 2 Circuit 1
-published 2013-01-14 09:37:00
-opt fingerprint 3B51 3D8A 0285 0585 7F16 59B0 DD82 7BBB E27A A8C1
-uptime 64231
-bandwidth 5242880 10485760 52938
-opt extra-info-digest 7551F072BC05F4F97BF7CC589025F119C69AA36D
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAML9sS8oassHWvsX2oB7h8kqdcQk2s4lrXyQIYVzc8c8yNdaJYwuax+2
-lJco5uainTgOEFAp/VUUq8tl56Nngv+tKEdB19VMhsYvD+UfOTndr4CTQTxCo4sW
-1jI78jhKhn6ZY3IPYf2ej3YznayJ0v249lBEmws4Zw/vE0iwOEmhAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAPDm3dGCZlkRlpOJ1y6EJzFNSUBXBIj4i4vxONNqgCF1QAoiBMM1zyiu
-NjkAXQxJDMVlZn8yf6CCj2hadkCUz2JC+jhSjs9PfgKNAqA3pntIJo8+MUjCP/bd
-4GgB4Ev6eQtcKteTnr+Bcgxef9KloSeK9Fbl7toRKCjZE0qdD42lAgMBAAE=
------END RSA PUBLIC KEY-----
-opt hidden-service-dir
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-JIT4bK3gow+O/r5pm+nFVuQdK96TohsphrJs456W/V8tTdd+2XTG8Hfpr5zRRBPA
-GFrGSV9J+aFjWV0igjaolBzY/xhAeae5tIxRZco+KVH4ANcFgOKDxBKC3CTmCDWc
-u/JmwhtixLN+u4/OALKAfgzIf2mSt6eYwBnCJmnQyWI=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 09:45:10
+@downloaded-at 2013-01-18 08:21:05
 @source "37.247.49.206"
 @purpose bridge
 router omgwtfbbq1 37.247.49.206 443 0 0
-platform Tor 0.2.4.7-alpha on FreeBSD
+platform Tor 0.2.4.9-alpha on FreeBSD
 protocols Link 1 2 Circuit 1
-published 2013-01-14 09:40:14
+published 2013-01-18 08:08:29
 fingerprint 7E58 563B F387 EE4F C1AF C7E8 9D18 930A 9600 E567
-uptime 590846
-bandwidth 393216 393216 429701
-extra-info-digest FC8B0EDD1B558A82C0D7620254BC5A3D4E3D8072
+uptime 135725
+bandwidth 393216 393216 430966
+extra-info-digest 24FC1A9ABE4B9B6D3D6B79CB2440846ABDFC3D9F
 onion-key
 -----BEGIN RSA PUBLIC KEY-----
 MIGJAoGBAK0XJf1hQOVcWG0pOvMogGS2lwCNvG7YHLxZb7mjQ3i2+vwSiZWvZeic
@@ -375,29 +245,30 @@ s70axMBwaQCV9mGwbGmKOL54+8zkfWHvJ/MPx/NyAR+a042YcPJpAgMBAAE=
 -----END RSA PUBLIC KEY-----
 hidden-service-dir
 contact 4096R/759CDEC0 aoeui <aoeui AT riseup dot net>
+ntor-onion-key inBzYaB8koViVzxnVzz/eaAG/f5OTRAXcB9npFi3sBM=
 reject *:*
 router-signature
 -----BEGIN SIGNATURE-----
-WXiz/S/yWFlo0+fE8b4NEup41++bOUAJLXMJw4hAl4fByodBja/u4bHMoNzMVcvy
-sh0JYdIqnHxuKAyAKrFeIiIvDAh7wwYYhZWBTmtwFS+PhRJgwcvfgqkejbE9yGkF
-un/ijB3QBQmkEKXVNhX4Q8e8fr8ROHLdnN5ecM+7FQY=
+aqBm7hP1owTx8QoF1c/VFEFgg4yCcMFfsY4/wsko+rqfPkw27HwS/j7bMPx0blSV
+bj5fIDwcL0OpbBdUPskFoXsk+NFFZT6Y7N5P5IllrTSru3MQmp70B02Hsi7PktOf
+EOF0J/L4IkR9wiIilVcN+VezVsGoEUngMLLWqWFtHGw=
 -----END SIGNATURE-----
-@downloaded-at 2013-01-14 09:59:22
+@downloaded-at 2013-01-18 08:51:38
 @source "54.248.132.125"
 @purpose bridge
 router ec2bridger2828fb2b 54.248.132.125 443 0 0
-platform Tor 0.2.4.7-alpha on Linux
+platform Tor 0.2.4.9-alpha on Linux
 protocols Link 1 2 Circuit 1
-published 2013-01-14 09:49:38
+published 2013-01-18 08:23:55
 fingerprint F83C 0D47 1F7B B746 87D6 D756 F490 6DAD 3A52 5025
-uptime 1208978
-bandwidth 1073741824 1073741824 265274
-extra-info-digest 97BB020AE0B62706585A89E7269AB1DF8F393EB5
+uptime 5609
+bandwidth 1073741824 1073741824 207872
+extra-info-digest 61E2F79753CE325E33929E38F157B6D6DBD1BEBD
 onion-key
 -----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAKacv8nq8wJ9ko+idrBb7GQOqJkMZ3aP29hmgj3zp9E096ZZfqUpjsxI
-Kdl/0KHJuh0f3OgexFVMGeHFm3BUrpRUN79lELBC7XWy+lrJd5kougWyTly2ssiV
-MEJs0f9QF7ZaJXCiVCP/sGKjTDTAstf+VadmaZVhRpdFohEmaqK5AgMBAAE=
+MIGJAoGBAL1t0kRDmy61fz/VVVaj+WFhJPJX5IsSI3eLgjFgnRpUoXlPBTQe8MUQ
+P1Dky50Pa5wQ/xE1Kia55aLAHrPFhv7HW0b8mYXdbDnMXhCe6aQ+oYm3T3XfAW5+
+yTVDyvWaoFnoLIkh3XCsqRA/JiJJkYJwa/KByejAhqsYYrPgs2W3AgMBAAE=
 -----END RSA PUBLIC KEY-----
 signing-key
 -----BEGIN RSA PUBLIC KEY-----
@@ -406,103 +277,11 @@ aGLKpAD9td5JXdkCSNm2cVwj2xYJSK6KcNd5joRmkb1a/a4kMiV1X9me9IgIYP2O
 LvKWGz8JYS5EexfDERo1op7Tx9zSKO5kJ5N59SnYDy+tjXQQjRVrAgMBAAE=
 -----END RSA PUBLIC KEY-----
 hidden-service-dir
+ntor-onion-key tMr0AKj77oM/EDZ3DT4RIuXLABeNJr0LfA4ogkaX9QQ=
 reject *:*
 router-signature
 -----BEGIN SIGNATURE-----
-G6dNZliS1vEXXfaLeKtBX0QXLSZh23IbZ2WIOBsvZvjwcjYQ7GBw4RFhWz29F4n3
-vbcmluXNF7fPe+4eX9ku1ZnYfxZi/LzFF9kuQRuWeGpgYPmnNbzfZdeQIhyATv5c
-VPTJkjcTbSLsVKE0DHUUzGxWWVwa2QQ0UDCdnBG3RRQ=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 10:14:38
-@source "64.79.111.18"
-@purpose bridge
-router Unnamed 64.79.111.18 443 0 0
-platform Tor 0.2.3.25 on Linux
-opt protocols Link 1 2 Circuit 1
-published 2013-01-14 10:04:20
-opt fingerprint C9D2 F50F 92B1 D287 2AF3 7539 4FCD 1649 6477 593F
-uptime 1210852
-bandwidth 5242880 10485760 701170
-opt extra-info-digest BD574ED599ADE92224A039198528304C85A5D1C3
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBALsoRvVBM0ISTXPvyyHbM5/RD9RMCuuE09yOBCCuRE4O/u/zRc0dEAdX
-WAvsFSvMpC4dRJivpEdaONId3ZSWqwzBJXhiQCB5XG7czSpRunt4b8TdkMcVP0zv
-VMpz5XoC2c9Bm9M4K0Y9yQU9otzuGZIMw/NZiHYHui67mpw0KsFRAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMRns7G+hkiHL2pjIag07SWUeNCRY8YBwpi0NgDp/AxE0eemyWEfXZVa
-efSben6I09P8WaqYPs6MfN97vwmCLz+VCRJ7C5EPwLVlF46Hprj7HqDDXduyCknr
-1DT3erhyEZ7VWDEjpdkLGo8W/WsK5NFkQpVwgYk0wv7vC1yb+FgDAgMBAAE=
------END RSA PUBLIC KEY-----
-opt hidden-service-dir
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-w3AcjsBFVQv/7fHxMaAQzSVycHznudAHJP9Qp/setAT+AYJp+zO4SLuJkmZzmvm/
-M6JliQ1Y002bvpWpm1Gn8HNIqeiQN7wsku3lc7d/t2RuJneAl9pRddgA48J05xdr
-TcMd7rF5F/xC5INgE2Naawp390yHGsPOEmSCzXbJ3t0=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 10:15:26
-@source "66.225.195.38"
-@purpose bridge
-router windy 66.225.195.38 443 0 0
-platform Tor 0.2.4.7-alpha on Linux
-protocols Link 1 2 Circuit 1
-published 2013-01-14 10:06:54
-fingerprint 0AF3 6B23 0A8A D459 61F3 FB65 2850 65CD DF48 2B7F
-uptime 1487814
-bandwidth 1048576 1048576 85879
-extra-info-digest 2422A734DA1EE7FDA50BACD164345CA215D76480
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBALa4w33AjvTSQgt37yRl7uX3BoEcpUBrUd3MCosqOuo99Wzy2S7VxIvW
-u/tREiWMEB/5iKMshx2GQ3Hh69q4g7UQH9SUxnoq97PKl4YBWv5YFcC9r5vSePsN
-4Iq2vQjFQrz47qCcXB51Ukgd8lW2JbNGOF1PfNAkVO7WMFp8n+ytAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBALDthMqw6VRmt0KHbfmmgcCoxdGOCILsvZfFk4s0jYzMPbhNkAhHds+r
-e083mOrmvn4LpiOAj7q+Wllz8PrZvEfUMTnHe1aFbTzWtV6/A+U8GG48pi8NbXxW
-urAhYo3kWw6nDBVySqO3dPSvavyrtJMeFN0tD4ZCM5rN9AyYkYjhAgMBAAE=
------END RSA PUBLIC KEY-----
-hidden-service-dir
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-UsN6F8c1f4n7eBN6cAXPYaXqhqhD0gFl1E/wEx+xMVSxYRlX8hzB6eGDSvmxc4sD
-5ePSm7/36HC0xjKaM3buSVe8rPJNVcV8fXvnJ31n4aB9XOc7mptdDr7aXDEPX9No
-ERshu/XGebsQkvXzjf2LyPYQfyI5shNpSLBFMb4Nbkk=
------END SIGNATURE-----
-@downloaded-at 2013-01-14 10:18:24
-@source "64.34.218.57"
-@purpose bridge
-router rem 64.34.218.57 443 0 0
-platform Tor 0.2.4.7-alpha on Linux
-protocols Link 1 2 Circuit 1
-published 2013-01-14 10:08:16
-fingerprint 8D91 A33D 4946 E0B3 9783 6168 9DC9 1933 63C9 55FE
-uptime 60032
-bandwidth 1073741824 1073741824 307200
-extra-info-digest 5D39DF3F9F8DA1A9C48ACDA98AF4460F755972B3
-onion-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMTzfqCA75QKofqohXa10AyDsqZQ/2iWB7aR9FKVzolhG7/Tw+kYKOIy
-fyb1j9IUbVcBT4pkjI3mgDLjGBqQXg58lLImZwrJxM1x3xcupeybqNkRxDFPUs1/
-qAVu+31uHXZyQL7cy6XuI36EDzjA2o4hHfya62kmYw408T/GHVPBAgMBAAE=
------END RSA PUBLIC KEY-----
-signing-key
------BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAMnR+2w4N5YKzbWtYJAf5zNB2o2RdNFSNm3u6ap5LzV4kYo8gujI1iY8
-vzja6Hc6fkXLeeSA4q+eEsFdw/bAigW51sIANxYNBFYUy/yNVC5wPWstsBatsAqM
-Msl2NCsYdzmQI6LgK9oEl0Bd5Qe6jEYISVDfyy/NAKk6d4sJ9YWpAgMBAAE=
------END RSA PUBLIC KEY-----
-hidden-service-dir
-reject *:*
-router-signature
------BEGIN SIGNATURE-----
-vTjkfxo0sdjLgNMU+MrpkpsELR+bOtnzaRUTqyvH6wppaHM8XI+VdFt5HeXj2BrJ
-gr7IWTeaG07gdrPFUsiJIXnlP379lewk3/EomW1Hhj1NYq1ntM9dh0Qzk5/qE2tM
-/LfjXkhf5AmEya7ERVfHFgClMODoYCROiE9CKZkeiuM=
+W6xt72oWhpeiAeAt2utfRRJt/y1fXiT8Y4D9fohd2YqtS00H1kWnAdV+P/PzPe09
+jO8AnB8IEyh7FTQ83efRTpyEactcDroRVtYQ60f8P3w4aIXPcNoLY40L36IfhrwK
+00OnZ+nSTk6tQZGRES+BqnMcFkMQu6lDRpsflWWxMUs=
 -----END SIGNATURE-----

@@ -115,6 +115,8 @@ Bridge 66.85.184.130:443
 Bridge obfs2 176.34.160.183:52176
 Bridge 94.21.93.17:9001
 Bridge obfs2 199.241.31.96:50809
+Bridge 95.245.3.197:443
+Bridge 95.238.97.216:443
 ClientTransportPlugin obfs2 exec obfsproxy --managed
 ControlPort 9051
 ControlPortWriteToFile /tmp/port.conf
