@@ -27,6 +27,7 @@ localhost
 .moode.cn
 
 {direct}
+.blogger.com
 .channel.facebook.com
 .ak.facebook.com
 
@@ -37,19 +38,23 @@ localhost
 frd/http://
 
 {goagent}
+
+{polipo}
+.dw.de
+.typekit.net
 www.pandora.com/$
 .pandora.com/radio
 .c.youtube.com
-
-{polipo}
+.twitter.com
+.t.co
+.twimg.com
+.tweetdeck.com
 rain.orgfree.com
-cucumber.no.de
 bit.ly
 .cloudfront.net
 .ivank.net
 .mathjax.org
 .blogspot.com
-.blogger.com
 .tjholowaychuk.com
 .huayuworld.org
 .dwnews.com
@@ -59,18 +64,22 @@ bit.ly
 .wordpress.com
 .check.torproject.org
 .appspot.com
-.twitter.com
-.t.co
-.twimg.com
-.tweetdeck.com
 .igfw.net
 .chinagfw.org
 .debian.org
 .rcinet.ca
 .caonima.biz
 .aboluowang.com
+.pbwiki.com
 
 {block}
+a.alimama.cn
+hm.baidu.com
+.csbew.com
+.icast.cn
+.91adv.com
+.acs86.com
+.cbjs.baidu.com
 .doubleclick.net
 .baidu.com/cpro
 .share.baidu.com
