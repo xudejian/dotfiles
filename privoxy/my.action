@@ -11,35 +11,25 @@ shop      = -crunch-all-cookies allow-popups
 auto-https = +redirect{s@http://@https://@}
 
 polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
-goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies -block
+polipo-direct = +forward-override{forward 127.0.0.1:8456} allow-all-cookies
+goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-sock5 127.0.0.1:9050 .}
 direct = +forward-override{forward .} -block
 local = +forward-override{forward .} -block allow-popups allow-all-cookies
 default = +forward-override{forward .}
 
-{local}
-127.
-192.168.
-localhost
-.moode
-.daogou.net
-.douxiu.com
-.moode.cn
-
-{direct}
-.blogger.com
-.channel.facebook.com
-.ak.facebook.com
-
-{+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
-.google.com/url
-
-{+fast-redirects{check-decoded-url}}
-frd/http://
-
 {goagent}
+.blogspot.com
+
+{polipo-direct}
+.apple.com
+.mzstatic.com
+.phobos.apple.com
+.php.net
 
 {polipo}
+.dropbox.com
+nodemanual.org
 .dw.de
 .typekit.net
 www.pandora.com/$
@@ -50,11 +40,10 @@ www.pandora.com/$
 .twimg.com
 .tweetdeck.com
 rain.orgfree.com
+vim.runpaint.org
 bit.ly
-.cloudfront.net
 .ivank.net
 .mathjax.org
-.blogspot.com
 .tjholowaychuk.com
 .huayuworld.org
 .dwnews.com
@@ -104,3 +93,28 @@ images.sohu.com
 img.cnbeta.com/[^/]*\.(gif|png|jpg)
 da.feedsportal.com/.*\.img
 .baifendian.com
+.allyes.com
+
+{local}
+127.
+192.168.
+localhost
+.moode
+.daogou.net
+.douxiu.com
+.moode.cn
+
+{direct}
+.blogger.com
+.channel.facebook.com
+.ak.facebook.com
+.taobao.com
+.alipay.com
+.dropbox.com:443
+
+{+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
+.google.com/url
+
+{+fast-redirects{check-decoded-url}}
+frd/http://
+
