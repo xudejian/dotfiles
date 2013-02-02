@@ -36,5 +36,8 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+*.iml
+coverage.html
 .idea
 Gemfile.lock
+node_modules/
