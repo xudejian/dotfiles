@@ -18,8 +18,7 @@ direct = +forward-override{forward .} -block
 local = +forward-override{forward .} -block allow-popups allow-all-cookies
 default = +forward-override{forward .}
 
-{goagent}
-.blogspot.com
+{block}
 
 {polipo-direct}
 .apple.com
@@ -27,15 +26,19 @@ default = +forward-override{forward .}
 .phobos.apple.com
 .php.net
 
+{goagent}
+.c.youtube.com
+
 {polipo}
+.blogspot.com
+.twitter.com
+.railstutorial.org
 .dropbox.com
 nodemanual.org
 .dw.de
 .typekit.net
 www.pandora.com/$
 .pandora.com/radio
-.c.youtube.com
-.twitter.com
 .t.co
 .twimg.com
 .tweetdeck.com
@@ -61,40 +64,6 @@ bit.ly
 .aboluowang.com
 .pbwiki.com
 
-{block}
-a.alimama.cn
-hm.baidu.com
-.csbew.com
-.icast.cn
-.91adv.com
-.acs86.com
-.cbjs.baidu.com
-.doubleclick.net
-.baidu.com/cpro
-.share.baidu.com
-.atm.youku.com
-.lstat.youku.com
-.stat.youku.com
-.dcads.sina.com.cn
-.adsunion.com
-.googlesyndication.com
-807.tianya.cn
-806.tianya.cn
-cpro.baidustatic.com
-.cnzz.com
-ggmm777.com
-images.sohu.com
-.admaster.com.cn/i
-.atm.youku.com/crossdomain.xml
-.sina.com.cn/crossdomain.xml
-.tudou.com/tdcm/adcontrol
-.google-analytics.com/urchin
-.cnbeta.com/.*\.js
-img.cnbeta.com/[^/]*\.(gif|png|jpg)
-da.feedsportal.com/.*\.img
-.baifendian.com
-.allyes.com
-
 {local}
 127.
 192.168.
@@ -117,4 +86,3 @@ localhost
 
 {+fast-redirects{check-decoded-url}}
 frd/http://
-
