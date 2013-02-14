@@ -4,8 +4,7 @@ launchctl_restart () {
 	if [[ $owner = 'root' ]]; then
 		SUDO='sudo'
 	fi
-	$SUDO launchctl unload -w $1
-	$SUDO launchctl load -w $1
+	$SUDO launchctl unload -w $1 && $SUDO launchctl load -w $1
 }
 
 restart () {
