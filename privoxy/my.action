@@ -18,6 +18,10 @@ direct = +forward-override{forward .} -block
 local = +forward-override{forward .} -block allow-popups allow-all-cookies
 default = +forward-override{forward .}
 
+{auto-https}
+www.facebook.com:80
+developer.android.com:80
+
 {polipo-direct}
 .apple.com
 .mzstatic.com
@@ -45,8 +49,11 @@ nodemanual.org
 .wordpress.com
 .debian.org
 .rcinet.ca
+.slideshare.net
+feeds.feedburner.com
 
 {polipo}
+.blogger.com
 .golang.org
 .businessweek.com
 .igossip.com
@@ -79,7 +86,8 @@ localhost
 .moode.cn
 
 {direct}
-.blogger.com
+:443
+.blogger.com:443
 .channel.facebook.com
 .ak.facebook.com
 .taobao.com
@@ -87,6 +95,7 @@ localhost
 .dropbox.com:443
 .airasia.com
 .agoda.net
+.google.com
 
 {+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
 .google.com/url
