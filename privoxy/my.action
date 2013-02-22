@@ -21,6 +21,7 @@ default = +forward-override{forward .}
 {auto-https}
 www.facebook.com:80
 developer.android.com:80
+twitter.com:80
 
 {polipo-direct}
 .apple.com
@@ -35,9 +36,9 @@ developer.android.com:80
 www.pandora.com/$
 .pandora.com/radio
 .t.co
-.twitter.com
+.twitter.com:443
 .twimg.com
-.tweetdeck.com
+.tweetdeck.com:443
 .cloudfront.net
 .typekit.net
 bit.ly
@@ -86,7 +87,6 @@ localhost
 .moode.cn
 
 {direct}
-:443
 .blogger.com:443
 .channel.facebook.com
 .ak.facebook.com
@@ -96,6 +96,7 @@ localhost
 .airasia.com
 .agoda.net
 .google.com
+.cmbchina.com
 
 {+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
 .google.com/url
