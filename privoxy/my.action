@@ -22,6 +22,8 @@ default = +forward-override{forward .}
 www.facebook.com:80
 developer.android.com:80
 twitter.com:80
+blogger.com:80
+twitter.com:80
 
 {polipo-direct}
 .apple.com
@@ -87,7 +89,6 @@ localhost
 .moode.cn
 
 {direct}
-.blogger.com:443
 .channel.facebook.com
 .ak.facebook.com
 .taobao.com
