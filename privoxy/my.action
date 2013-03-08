@@ -11,7 +11,7 @@ shop      = -crunch-all-cookies allow-popups
 auto-https = +redirect{s@http://@https://@}
 
 polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
-polipo-direct = +forward-override{forward 127.0.0.1:8456} allow-all-cookies
+polipo-cache = +forward-override{forward 127.0.0.1:8456} allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-sock5 127.0.0.1:9050 .}
 direct = +forward-override{forward .} -block
@@ -25,11 +25,13 @@ twitter.com:80
 blogger.com:80
 twitter.com:80
 
-{polipo-direct}
+{polipo-cache}
 .apple.com
 .mzstatic.com
 .phobos.apple.com
 .php.net
+.gnupg.org
+.ruby-lang.org
 
 {goagent}
 .blogspot.com
