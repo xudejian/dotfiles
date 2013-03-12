@@ -13,10 +13,13 @@ auto-https = +redirect{s@http://@https://@}
 polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
 polipo-cache = +forward-override{forward 127.0.0.1:8456} allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
-tor = +forward-override{forward-sock5 127.0.0.1:9050 .}
+tor = +forward-override{forward-sock5 127.0.0.1:9050}
 direct = +forward-override{forward .} -block
 local = +forward-override{forward .} -block allow-popups allow-all-cookies
 default = +forward-override{forward .}
+
+{tor}
+.onion
 
 {auto-https}
 www.facebook.com:80
@@ -32,6 +35,7 @@ twitter.com:80
 .php.net
 .gnupg.org
 .ruby-lang.org
+.mathjax.org
 
 {goagent}
 .blogspot.com
@@ -56,10 +60,9 @@ nodemanual.org
 .rcinet.ca
 .slideshare.net
 feeds.feedburner.com
+.golang.org
 
 {polipo}
-.blogger.com
-.golang.org
 .businessweek.com
 .igossip.com
 .pixnet.net
@@ -68,7 +71,6 @@ feeds.feedburner.com
 rain.orgfree.com
 vim.runpaint.org
 .ivank.net
-.mathjax.org
 .tjholowaychuk.com
 .huayuworld.org
 .dwnews.com
