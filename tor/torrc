@@ -16,13 +16,8 @@ Bridge obfs2 173.254.192.38:1051
 Bridge obfs2 188.40.20.215:32982
 Bridge obfs2 212.112.242.160:49259
 Bridge obfs2 213.108.105.129:36609
-Bridge [2604:4100:0:1::261a:762c]:443
 Bridge 86.56.145.208:9001
 Bridge 91.3.203.211:443
-Bridge [2001:948:7:2::163]:6001
-Bridge [2600:3c01::f03c:91ff:fe93:d525]:9001
-Bridge [2600:3c01::f03c:91ff:fe93:b8ee]:443
-Bridge [2a01:e35:2f37:7b90:212:3fff:fe36:cac8]:443
 Bridge 216.128.72.54:443
 Bridge 188.165.44.95:443
 Bridge 108.170.138.61:4090
@@ -55,7 +50,6 @@ Bridge 199.241.31.96:443
 Bridge 50.17.12.150:443
 Bridge 108.166.185.228:443
 Bridge obfs2 199.241.31.96:40538
-Bridge [2a00:7b80:478:13::c29b:8ad3]:443
 Bridge 217.251.200.106:443
 Bridge 46.228.205.101:9001
 Bridge obfs2 46.51.156.191:52176
@@ -77,17 +71,13 @@ Bridge 212.112.235.76:19001
 Bridge 69.251.251.192:4443
 Bridge 87.167.231.35:443
 Bridge 88.219.19.14:443
-Bridge [2001:470:1f06:28e::fd54:9617]:443
 Bridge 62.165.208.209:9001
 Bridge 178.203.253.98:443
 Bridge 95.142.160.71:9001
-Bridge [2405:4200:202::8c8c:e7b1]:443
-Bridge [2a02:3010:100:1::1:2483]:1443
 Bridge obfs2 54.248.173.160:52176
 Bridge 81.210.250.210:9001
 Bridge 199.195.254.176:443
 Bridge obfs2 54.246.51.174:52176
-Bridge [2a01:1e8:e139:2112:213:d4ff:feab:67ff]:65000
 Bridge 92.105.165.20:9001
 Bridge 178.32.62.36:443
 Bridge obfs2 54.248.132.125:52176
@@ -99,13 +89,11 @@ Bridge 95.222.249.139:5050
 Bridge 74.214.58.132:23513
 Bridge 85.214.158.217:443
 Bridge 76.10.151.59:9001
-Bridge [2a01:238:42f7:9800:9647:88d:1089:f1f2]:443
 Bridge 87.167.252.31:443
 Bridge 79.51.119.188:443
 Bridge 74.207.240.149:465
 Bridge 5.178.71.96:443
 Bridge obfs2 54.247.0.43:52176
-Bridge [2a01:e35:8a88:8a30:ca60:ff:fe04:801]:443
 Bridge 94.214.99.209:443
 Bridge 81.29.250.221:443
 Bridge 196.28.5.162:443
@@ -155,14 +143,17 @@ Bridge 192.81.249.126:443
 Bridge obfs2 93.135.252.80:55492
 Bridge obfs2 176.34.80.168:52176
 Bridge 174.0.45.163:9003
-ClientTransportPlugin obfs2 exec obfsproxy --managed
+Bridge 87.167.229.175:443
+Bridge 83.91.166.217:8888
+ClientTransportPlugin obfs2 exec /usr/local/bin/obfsproxy --managed
 ControlPort 9051
 ControlPortWriteToFile /tmp/port.conf
 DataDirectory /usr/local/etc/tor/data
-DirReqStatistics 0
+DirReqStatistics 1
 GeoIPFile /usr/local/etc/tor/data/Tor/geoip
 HashedControlPassword 16:39541DEED4A8E4FB60B12309078076D2B1A21711EFE304266D5312B562
-Log notice stdout
+Log notice file /usr/local/var/log/tor.log
+MapAddress 10.40.40.40 p4fsi4ockecnea7l.onion
 SocksListenAddress 127.0.0.1:9050
 SocksPort 9050
 UpdateBridgesFromAuthority 1
