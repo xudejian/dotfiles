@@ -109,8 +109,8 @@ GeoIPFile /usr/local/etc/tor/data/geoip
 Log notice file /usr/local/var/log/tor.log
 MapAddress 10.40.40.40 p4fsi4ockecnea7l.onion
 SocksListenAddress 127.0.0.1
-SocksPort 9150
-ControlPort 9151
+SocksPort 9050
+ControlPort 9051
 UpdateBridgesFromAuthority 1
 UseBridges 1
 # The address and port are ignored by the client transport plugin.
