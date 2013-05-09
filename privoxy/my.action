@@ -14,8 +14,8 @@ polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
 polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-sock5 127.0.0.1:9050}
-direct = +forward-override{forward .} -block
 local = +forward-override{forward .} -block allow-popups allow-all-cookies
+direct = local
 default = +forward-override{forward .}
 
 {tor}
@@ -36,6 +36,7 @@ blogger.com:80
 .ruby-lang.org
 .mathjax.org
 
+{polipo}
 {goagent}
 .blogspot.com
 .appspot.com
@@ -61,7 +62,6 @@ nodemanual.org
 feeds.feedburner.com
 .golang.org
 
-{polipo}
 platform.twitter.com
 .businessweek.com
 .igossip.com
@@ -82,6 +82,7 @@ check.torproject.org
 .caonima.biz
 .aboluowang.com
 .pbwiki.com
+trc.taboola.com
 
 {local}
 127.
@@ -95,13 +96,16 @@ localhost
 {direct}
 .channel.facebook.com
 .ak.facebook.com
-.taobao.com
-.alipay.com
 .dropbox.com:443
 .airasia.com
 .agoda.net
 .google.com
 .cmbchina.com
+#Taobao
+.taobao.com
+.alipay.com
+.mmstat.com
+banner.alimama.com
 
 {+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
 .google.com/url
@@ -109,3 +113,36 @@ localhost
 {+fast-redirects{check-decoded-url}}
 frd/http://
 {block}
+a.alimama.cn
+.csbew.com
+.icast.cn
+.91adv.com
+.acs86.com
+#.cbjs.baidu.com
+cpro.baidustatic.com
+.baidu.com/cpro
+.doubleclick.net
+.share.baidu.com
+.atm.youku.com
+.lstat.youku.com
+.stat.youku.com
+.dcads.sina.com.cn
+.adsunion.com
+.googlesyndication.com
+807.tianya.cn
+806.tianya.cn
+.cnzz.com
+ggmm777.com
+images.sohu.com
+.admaster.com.cn/i
+.atm.youku.com/crossdomain.xml
+.navi.youku.com/crossdomain.xml
+.irs01.
+.sina.com.cn/crossdomain.xml
+.tudou.com/tdcm/adcontrol
+.google-analytics.com/urchin
+.cnbeta.com/.*\.js
+img.cnbeta.com/[^/]*\.(gif|png|jpg)
+da.feedsportal.com/.*\.img
+.baifendian.com
+.allyes.com
