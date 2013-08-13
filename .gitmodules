@@ -1,0 +1,3 @@
+[submodule "dnsmasq.d"]
+	path = dnsmasq.d
+	url = git://github.com/xudejian/mydns.git
