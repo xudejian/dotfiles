@@ -14,7 +14,7 @@ polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
 polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-sock5 127.0.0.1:9050}
-local = +forward-override{forward .} -block allow-popups allow-all-cookies
+local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
 
@@ -22,6 +22,7 @@ default = +forward-override{forward .}
 .onion
 
 {auto-https}
+www.google.com.hk
 www.facebook.com:80
 developer.android.com:80
 twitter.com:80
@@ -35,9 +36,12 @@ blogger.com:80
 .gnupg.org
 .ruby-lang.org
 .mathjax.org
+.rubygems.org
 
 {polipo}
 {goagent}
+player.vimeo.com
+.iask.ca
 .blogspot.com
 .appspot.com
 .c.youtube.com
@@ -88,8 +92,6 @@ trc.taboola.com
 127.
 192.168.
 localhost
-.moode
-.daogou.net
 .douxiu.com
 .moode.cn
 
@@ -102,10 +104,12 @@ localhost
 .google.com
 .cmbchina.com
 #Taobao
+.tbsandbox.com
 .taobao.com
 .alipay.com
 .mmstat.com
 banner.alimama.com
+.10010.com
 
 {+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
 .google.com/url
@@ -113,10 +117,13 @@ banner.alimama.com
 {+fast-redirects{check-decoded-url}}
 frd/http://
 {block}
+#data.video.qiyi.com/videos
 show.g.mediav.com
 track.cupid.qiyi.com
 .ggxt.net
 .qiyi.com/adpb.gif
+/preloader.swf
+.admaster.com.cn
 .qiyi.com/vpb.gif
 .com/stat.html
 .51.la
@@ -156,3 +163,4 @@ img.cnbeta.com/[^/]*\.(gif|png|jpg)
 da.feedsportal.com/.*\.img
 .baifendian.com
 .allyes.com
+hm.baidu.com
