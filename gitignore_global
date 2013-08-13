@@ -41,5 +41,6 @@ coverage.html
 .idea
 Gemfile.lock
 node_modules/
-tags
 .session
+*.pyc
+*.wsgic
