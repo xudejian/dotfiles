@@ -35,7 +35,7 @@ cacheIsShared = false
 
 # Uncomment this if you want to use a parent SOCKS proxy:
 
-socksParentProxy = "localhost:9050"
+socksParentProxy = "localhost:9150"
 socksProxyType = socks5
 
 
@@ -60,12 +60,12 @@ chunkHighMark = 67108864
 
 # Uncomment this if you want to disable the on-disk cache:
 
-diskCacheRoot = ""
+#diskCacheRoot = ""
 
 # Uncomment this if you want to put the on-disk cache in a
 # non-standard location:
 
-#diskCacheRoot = "~/.polipo-cache/"
+diskCacheRoot = "~/.polipo-cache/"
 
 # Uncomment this if you want to disable the local web server:
 

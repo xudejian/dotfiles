@@ -13,7 +13,7 @@ auto-https = +redirect{s@http://@https://@}
 polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
 polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
-tor = +forward-override{forward-sock5 127.0.0.1:9050}
+tor = +forward-override{forward-sock5 127.0.0.1:9150}
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
@@ -40,6 +40,7 @@ blogger.com:80
 
 {polipo}
 {goagent}
+.github.com
 player.vimeo.com
 .iask.ca
 .blogspot.com
@@ -118,11 +119,14 @@ banner.alimama.com
 frd/http://
 {block}
 #data.video.qiyi.com/videos
+/.*stats.gif
+.tanx.com
+/player/.*pageer.swf
 show.g.mediav.com
 track.cupid.qiyi.com
 .ggxt.net
 .qiyi.com/adpb.gif
-/preloader.swf
+/.*preloader.swf
 .admaster.com.cn
 .qiyi.com/vpb.gif
 .com/stat.html
