@@ -20,6 +20,7 @@ default = +forward-override{forward .}
 
 {tor}
 .onion
+check.torproject.org
 
 {auto-https}
 www.google.com.hk
@@ -39,18 +40,33 @@ blogger.com:80
 .rubygems.org
 
 {polipo}
-{goagent}
-player.vimeo.com
+developers.facebook.com
+.ihid.co.uk
 .iask.ca
-.blogspot.com
-.appspot.com
-.c.youtube.com
-www.pandora.com/$
-.pandora.com/radio
+.rcinet.ca
+.dw.de
+.dwnews.com
+.hidemyass.com
+.igfw.net
+.chinagfw.org
+.caonima.biz
+trc.taboola.com
+.aboluowang.com
+.git-scm.com
+.vimeo.com
 .t.co
 .twitter.com:443
 .twimg.com
 .tweetdeck.com:443
+platform.twitter.com
+.c.youtube.com
+
+{goagent}
+.blogspot.com
+.appspot.com
+www.pandora.com/$
+.pandora.com/radio
+
 .cloudfront.net
 .typekit.net
 bit.ly
@@ -61,32 +77,21 @@ nodemanual.org
 .nokogiri.org
 .wordpress.com
 .debian.org
-.rcinet.ca
 .slideshare.net
 feeds.feedburner.com
 .golang.org
 
-platform.twitter.com
 .businessweek.com
 .igossip.com
 .pixnet.net
 .dropbox.com
-.dw.de
 rain.orgfree.com
 vim.runpaint.org
 .ivank.net
 .tjholowaychuk.com
 .huayuworld.org
-.dwnews.com
-.hidemyass.com
 .sourceforge.net
-check.torproject.org
-.igfw.net
-.chinagfw.org
-.caonima.biz
-.aboluowang.com
 .pbwiki.com
-trc.taboola.com
 
 {local}
 127.
