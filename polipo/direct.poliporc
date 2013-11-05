@@ -8,7 +8,7 @@
 # proxyAddress = "::0"        # both IPv4 and IPv6
 # proxyAddress = "0.0.0.0"    # IPv4 only
 
-proxyAddress = "127.0.0.1"
+proxyAddress = "::0"
 proxyPort = 8456
 
 # If you do that, you'll want to restrict the set of hosts allowed to
@@ -98,7 +98,7 @@ disableConfiguration = true
 # default resolver instead.  If you do that, Polipo will freeze during
 # every DNS query:
 
-dnsUseGethostbyname = yes
+#dnsUseGethostbyname = yes
 
 
 ### HTTP

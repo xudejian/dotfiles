@@ -10,10 +10,11 @@ block     = +block-as-image +handle-as-empty-document
 shop      = -crunch-all-cookies allow-popups
 auto-https = +redirect{s@http://@https://@}
 
-polipo = +forward-override{forward 127.0.0.1:8123} allow-all-cookies
 polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
-tor = +forward-override{forward-sock5 127.0.0.1:9150}
+#polipo = +forward-override{forward 127.0.0.1:8123}
+polipo = goagent
+tor = +forward-override{forward-socks5t 127.0.0.1:9150 .}
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
@@ -28,6 +29,8 @@ www.facebook.com:80
 developer.android.com:80
 twitter.com:80
 blogger.com:80
+developer.chrome.com:80
+code.google.com:80
 
 {polipo-cache}
 .apple.com
@@ -40,6 +43,9 @@ blogger.com:80
 .rubygems.org
 
 {polipo}
+sequelizejs.com
+.nytimes.com
+feeds.feedburner.com
 developers.facebook.com
 .ihid.co.uk
 .iask.ca
@@ -60,8 +66,11 @@ trc.taboola.com
 .tweetdeck.com:443
 platform.twitter.com
 .c.youtube.com
+.ck101.com
+.tw.myblog.yahoo.com
 
 {goagent}
+.behat.org
 .blogspot.com
 .appspot.com
 www.pandora.com/$
@@ -78,7 +87,6 @@ nodemanual.org
 .wordpress.com
 .debian.org
 .slideshare.net
-feeds.feedburner.com
 .golang.org
 
 .businessweek.com
@@ -101,6 +109,7 @@ localhost
 .moode.cn
 
 {direct}
+.hipandora.com
 .channel.facebook.com
 .ak.facebook.com
 .dropbox.com:443
@@ -121,8 +130,9 @@ banner.alimama.com
 
 {+fast-redirects{check-decoded-url}}
 frd/http://
+
 {block}
-#data.video.qiyi.com/videos
+tongji.zhidao.baidu.com
 /.*stats.gif
 .tanx.com
 /player/.*pageer.swf

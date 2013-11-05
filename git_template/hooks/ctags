@@ -3,6 +3,14 @@
 set -e
 PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/tags.$$" EXIT
-ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --languages=-sql
+ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=assets --exclude=images --exclude=img --languages=-sql
 mv .git/tags.$$ .git/tags
+exit 0
+EXCLUDE=""
+for i in .git temp test tests images img assets
+do
+	EXCLUDE+=" -name $i -prune -o"
+done
 
+find . $EXCLUDE -name "*.php" -type f -print > .git/cscope.files
+cscope -bkq -f .git/cscope.out -i .git/cscope.files
