@@ -1,2 +1,11 @@
 #!/bin/sh
 .git/hooks/ctags >/dev/null 2>&1 &
+exit
+commit=$(git log -1 | sed -n 's/commit //gp')
+git filter-branch --env-filter \
+  "if test \$GIT_COMMIT = '$commit'
+     then
+       export GIT_AUTHOR_DATE='`.git/hooks/timestamp.coffee`'
+       export GIT_COMMITTER_DATE='$GIT_AUTHOR_DATE'
+     fi" && \
+rm -fr "$(git rev-parse --git-dir)/refs/original/"
