@@ -6,10 +6,8 @@ fix_holiday_date () {
     then
       export GIT_AUTHOR_DATE='`.git/hooks/timestamp.coffee`'
     fi
-    if test '$GIT_COMMITTER_DATE' != '$GIT_AUTHOR_DATE'
-    then
-      export GIT_COMMITTER_DATE='$GIT_AUTHOR_DATE'
-    fi " && \
+    export GIT_COMMITTER_DATE=\"\$GIT_AUTHOR_DATE\"
+    " && \
       rm -fr "$(git rev-parse --git-dir)/refs/original/"
 }
 
