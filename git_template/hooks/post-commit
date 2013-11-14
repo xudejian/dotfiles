@@ -1,18 +1,2 @@
 #!/bin/bash
-fix_holiday_date () {
-  commit=$(git log -1 | sed -n 's/commit //gp')
-  git filter-branch --env-filter \
-    "if test \$GIT_COMMIT = '$commit'
-    then
-      export GIT_AUTHOR_DATE='`.git/hooks/timestamp.coffee`'
-    fi
-    export GIT_COMMITTER_DATE=\"\$GIT_AUTHOR_DATE\"
-    " && \
-      rm -fr "$(git rev-parse --git-dir)/refs/original/"
-}
-
 .git/hooks/ctags >/dev/null 2>&1 &
-if test "$(git config core.holiday)" = 'true'
-then
-  fix_holiday_date
-fi

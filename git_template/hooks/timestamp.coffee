@@ -3,6 +3,10 @@ to_weekend_tm = (tm) ->
   [ws, we, end] = weekend tm
   ws + ((tm - ws) * (we - ws) / (end - ws))
 
+cur_author_date = ->
+  nd = (new Date).getTime()
+  "@#{parseInt(nd/1000, 10)}"
+
 weekend = (tm) ->
   d = new Date(tm)
   d.setHours(23)
@@ -59,10 +63,10 @@ is_holiday = (tm) ->
     return false if -1 < notholiday[yyyy][m].indexOf dd
   return true if day is 0 or day is 6
 
-return unless process.env.GIT_AUTHOR_DATE
+author_date = process.env.GIT_AUTHOR_DATE || cur_author_date()
 
-if ts = process.env.GIT_AUTHOR_DATE.match /@(\d+) (.*)/
+if ts = author_date.match /@(\d+)(.*)/
   tz = ts[2]
   tm = 1000 * ts[1]
   nd = to_weekend_tm tm
-  console.log "@#{parseInt(nd/1000, 10)} #{tz}"
+  console.log "@#{parseInt(nd/1000, 10)}#{tz}"
