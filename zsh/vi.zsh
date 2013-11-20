@@ -1,3 +1,3 @@
 vi () {
-  vim -g --remote-tab-silent $@ || vim -g $@ || vim $@
+  vim -g --remote-tab-silent $@ || vim $@
 }
