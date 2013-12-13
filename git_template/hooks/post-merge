@@ -1,2 +1,3 @@
 #!/bin/sh
+.git/hooks/fix_holiday_date.sh
 .git/hooks/ctags >/dev/null 2>&1 &
