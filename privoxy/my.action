@@ -10,18 +10,23 @@ block     = +block-as-image +handle-as-empty-document
 shop      = -crunch-all-cookies allow-popups
 auto-https = +redirect{s@http://@https://@}
 
-polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
+#polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 #polipo = +forward-override{forward 127.0.0.1:8123}
 polipo = goagent
 tor = +forward-override{forward-socks5t 127.0.0.1:9150 .}
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
+polipo-cache = local
 default = +forward-override{forward .}
 
 {tor}
 .onion
 check.torproject.org
+.liveleak.com
+.mingpao.com
+.ptt.cc
+.c.pack.google.com
 
 {auto-https}
 www.google.com.hk
@@ -33,16 +38,19 @@ developer.chrome.com:80
 code.google.com:80
 
 {polipo-cache}
+.bower.herokuapp.com
 .apple.com
 .mzstatic.com
 .phobos.apple.com
-.php.net
 .gnupg.org
 .ruby-lang.org
 .mathjax.org
 .rubygems.org
+.registry.npmjs.org
 
 {polipo}
+.php.net
+.android.com
 sequelizejs.com
 .nytimes.com
 feeds.feedburner.com
@@ -68,14 +76,18 @@ platform.twitter.com
 .c.youtube.com
 .ck101.com
 .tw.myblog.yahoo.com
+.behat.org
 
 {goagent}
-.behat.org
+.google.com
+.cloudflare.com
 .blogspot.com
 .appspot.com
 www.pandora.com/$
 .pandora.com/radio
+talk.google.com
 
+.ngmodules.org
 .cloudfront.net
 .typekit.net
 bit.ly
@@ -115,7 +127,6 @@ localhost
 .dropbox.com:443
 .airasia.com
 .agoda.net
-.google.com
 .cmbchina.com
 #Taobao
 .tbsandbox.com
