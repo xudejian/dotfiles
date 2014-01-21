@@ -6,8 +6,10 @@
 +block-as-image     = +block{Blocked image request.} +handle-as-image
 -block-as-image     = -block
 
+fragile   = -block -crunch-all-cookies -filter -fast-redirects -hide-referer -prevent-compression
 block     = +block-as-image +handle-as-empty-document
 shop      = -crunch-all-cookies allow-popups
+allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
 auto-https = +redirect{s@http://@https://@}
 
 #polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
