@@ -51,7 +51,7 @@ code.google.com:80
 .registry.npmjs.org
 
 {polipo}
-.php.net
+.facebook.com
 .android.com
 sequelizejs.com
 .nytimes.com
@@ -81,7 +81,6 @@ platform.twitter.com
 .behat.org
 
 {goagent}
-.google.com
 .cloudflare.com
 .blogspot.com
 .appspot.com
@@ -90,7 +89,6 @@ www.pandora.com/$
 talk.google.com
 
 .ngmodules.org
-.cloudfront.net
 .typekit.net
 bit.ly
 ow.ly
