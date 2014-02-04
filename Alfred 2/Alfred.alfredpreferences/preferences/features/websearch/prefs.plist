@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>19080085-256A-418D-915B-A88E78EDCFB7</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>so</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search Stack Overflow for</string>
+			<key>url</key>
+			<string>http://stackoverflow.com/search?q={query}</string>
+			<key>utf8</key>
+			<false/>
+		</dict>
+		<key>1E2E14BE-70D6-4610-AE2A-D15EB5D348E1</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gs</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search Grooveshark for</string>
+			<key>url</key>
+			<string>http://grooveshark.com/#!/search?q={query}</string>
+			<key>utf8</key>
+			<false/>
+		</dict>
+		<key>21A4A500-8BD5-4503-85AA-9A3677ECC0EC</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>vim</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search vimdoc for</string>
+			<key>url</key>
+			<string>http://man.chinaunix.net/newsoft/vi/doc/{query}.html</string>
+			<key>utf8</key>
+			<false/>
+		</dict>
+		<key>AFC02892-B46E-438E-B84A-ABA927CE66D7</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jq</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search jQuery for</string>
+			<key>url</key>
+			<string>http://api.jquery.com/?s={query}</string>
+			<key>utf8</key>
+			<false/>
+		</dict>
+		<key>BAC54E27-0062-46C7-8B10-D82FBEF7E51D</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>mdn</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search MDN for</string>
+			<key>url</key>
+			<string>https://developer.mozilla.org/en-US/search?q={query}</string>
+			<key>utf8</key>
+			<false/>
+		</dict>
+		<key>F2A3AB4D-40C1-4BA7-8D05-6558F985A397</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>git</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search github for</string>
+			<key>url</key>
+			<string>https://github.com/search?q={query}</string>
+			<key>utf8</key>
+			<false/>
+		</dict>
+		<key>F3C5E733-CC45-4FE6-999C-2DA9E582A290</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>adc</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search ADC for</string>
+			<key>url</key>
+			<string>http://developer.apple.com/library/mac/search/?q={query}</string>
+			<key>utf8</key>
+			<false/>
+		</dict>
+	</dict>
+</dict>
+</plist>
