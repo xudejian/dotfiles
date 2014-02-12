@@ -23,8 +23,6 @@ plugins=(git osx colored-man bower brew coffee git-flow github node npm sublime)
 
 # Customize to your needs...
 export GOPATH=$HOME/github/go
-PATH=$HOME/bin:$PATH
-export PATH
 
 source $ZSH/oh-my-zsh.sh
 

@@ -8,7 +8,7 @@
 
 fragile   = -block -crunch-all-cookies -filter -fast-redirects -hide-referer -prevent-compression
 block     = +block-as-image +handle-as-empty-document
-shop      = -crunch-all-cookies allow-popups
+shop      = -crunch-all-cookies allow-popups fragile
 allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
 auto-https = +redirect{s@http://@https://@}
 
@@ -22,13 +22,16 @@ direct = local
 polipo-cache = local
 default = +forward-override{forward .}
 
+{shop}
+.ebates.cn
+.carters.com
+.coremetrics.com
+
 {tor}
 .onion
 check.torproject.org
 .liveleak.com
 .mingpao.com
-.ptt.cc
-.c.pack.google.com
 
 {auto-https}
 www.google.com.hk
@@ -51,6 +54,7 @@ code.google.com:80
 .registry.npmjs.org
 
 {polipo}
+.ptt.cc
 .facebook.com
 .android.com
 sequelizejs.com
