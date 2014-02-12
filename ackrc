@@ -1,0 +1,8 @@
+--smart-case
+--follow
+--pager=less -r
+
+--ignore-dir=node_modules/
+
+--type-set=jade=.jade
+--type-set=feature=.feature
