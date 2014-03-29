@@ -12,14 +12,13 @@ shop      = -crunch-all-cookies allow-popups fragile
 allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
 auto-https = +redirect{s@http://@https://@}
 
-#polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
+polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 #polipo = +forward-override{forward 127.0.0.1:8123}
 polipo = goagent
 tor = +forward-override{forward-socks5t 127.0.0.1:9150 .}
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
-polipo-cache = local
 default = +forward-override{forward .}
 
 {shop}
@@ -52,6 +51,8 @@ code.google.com:80
 .mathjax.org
 .rubygems.org
 .registry.npmjs.org
+.nodejs.org
+nodejs.org
 
 {polipo}
 .ptt.cc
@@ -85,12 +86,14 @@ platform.twitter.com
 .behat.org
 
 {goagent}
+.fastly.net
 .cloudflare.com
 .blogspot.com
 .appspot.com
 www.pandora.com/$
 .pandora.com/radio
 talk.google.com
+groups.google.com
 
 .ngmodules.org
 .typekit.net
@@ -118,6 +121,7 @@ vim.runpaint.org
 .pbwiki.com
 
 {local}
+0.0.0.0
 127.
 192.168.
 localhost
@@ -126,8 +130,6 @@ localhost
 
 {direct}
 .hipandora.com
-.channel.facebook.com
-.ak.facebook.com
 .dropbox.com:443
 .airasia.com
 .agoda.net

@@ -45,5 +45,6 @@ node_modules/
 *.pyc
 *.wsgic
 *.swp
+*.swo
 *~
 cscope.*

@@ -19,15 +19,13 @@ ZSH_THEME="kphoen"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx colored-man bower brew coffee git-flow github node npm sublime)
+plugins=(git osx colored-man)
 
 # Customize to your needs...
 export GOPATH=$HOME/github/go
 
-source $ZSH/oh-my-zsh.sh
-
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-
 ulimit -n 8192
-
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+source $ZSH/oh-my-zsh.sh
+export http_proxy=http://127.0.0.1:8118
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
