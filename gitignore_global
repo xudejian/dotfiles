@@ -39,7 +39,6 @@ Thumbs.db
 *.iml
 coverage.html
 .idea
-Gemfile.lock
 node_modules/
 .session
 *.pyc
