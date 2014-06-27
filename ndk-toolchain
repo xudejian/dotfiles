@@ -1,0 +1,53 @@
+#!/bin/bash
+CROSS_COMPILE=arm-linux-androideabi
+os=linux
+host_arch=x86_64
+
+case $(uname -m) in
+  x86_64)
+    host_arch="x86_64"
+    ;;
+  i[3456]86)
+    host_arch="x32"
+    ;;
+  *)
+    die "cannot detect your system arch"
+    ;;
+esac
+
+case $(uname -s) in
+  Darwin)
+    os="darwin"
+    ;;
+  Linux)
+    os="linux"
+    ;;
+  *)
+    die "cannot detect your system os"
+    ;;
+esac
+export TOOLCHAIN=$NDK_PATH/toolchains/${CROSS_COMPILE}-4.8/prebuilt/$os-$host_arch
+PREBUILD_TOOLS=$NDK_PATH/prebuilt/$os-$host_arch
+export PLATFORM=android-9
+export SYSROOT=$NDK_PATH/platforms/$PLATFORM/arch-arm
+export PATH=$TOOLCHAIN/bin:$PREBUILD_TOOLS/bin:$PATH
+prefix=$TOOLCHAIN/bin/${CROSS_COMPILE}-
+export CC="${prefix}gcc --sysroot=$SYSROOT"
+export CXX="${prefix}g++ --sysroot=$SYSROOT"
+export LINK=${prefix}g++
+export AR=${prefix}ar
+export AS=${prefix}as
+export RANLIB=${prefix}ranlib
+export STRIP=${prefix}strip
+export CXXFLAGS=--sysroot=$SYSROOT
+export CFLAGS=--sysroot=$SYSROOT
+
+./configure \
+--enable-shared=no \
+--host=$CROSS_COMPILE \
+--target=$CROSS_COMPILE \
+--prefix=$SYSROOT/usr \
+LIBS="-lc -lgcc" \
+--with-sysroot=$SYSROOT \
+"$@"
+make -j2

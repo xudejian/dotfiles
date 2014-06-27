@@ -27,5 +27,6 @@ export GOPATH=$HOME/github/go
 ulimit -n 8192
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 source $ZSH/oh-my-zsh.sh
-export http_proxy=http://127.0.0.1:8118
+export wdurl='http://192.168.0.132:4444/wd/hub'
+export BROWSER="internet explorer"
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local

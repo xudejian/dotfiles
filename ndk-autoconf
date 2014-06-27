@@ -1,0 +1,127 @@
+#!/bin/bash
+
+NDK=$ANDROID_NDK_HOME
+# static data
+CROSS_COMPILE=arm-linux-androideabi
+NDK_TOOLCHAIN=""
+GNUMAKE=make
+
+function die()
+{
+  echo $@
+  exit 1
+}
+
+function arg_parse()
+{
+  if [ $# -lt 1 ] ; then
+    die -e "Usage ndk-autoconf <api>\ne.g. ndk-autoconf 9"
+  fi
+
+  if [ ! -d "$NDK/platforms/android-$1/" ] ; then
+    die "cannot find android sysroot in your $NDK"
+  fi
+}
+
+function check_external_scripts()
+{
+  if [ ! -f "${NDK}/config.guess"  -o ! -f "${NDK}/config.sub" ] ; then
+    echo "warning: missing config.guess or config.sub in your ndk dir"
+    echo "info: should i download them for you? [y/n]"
+    read choice
+    if [ "x$choice" != "xy" -a "x$choice" != "xY" ] ; then
+      die "error: missing config.guess or config.sub"
+    fi
+    wget "http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD" -qO "${NDK}/config.sub" || die "cannot download config.sub"
+    wget "http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD" -qO "${NDK}/config.guess" || die "cannot download config.guess"
+  fi
+  cp ${NDK}/config.guess . || die "cannot import files"
+  cp ${NDK}/config.sub . || die "cannot import files"
+}
+
+function find_toolchain()
+{
+  local tmp;
+  local os;
+  local host_arch;
+
+  case $(uname -m) in
+    x86_64)
+      host_arch="x86_64"
+      ;;
+    i[3456]86)
+      host_arch="x32"
+      ;;
+    *)
+      die "cannot detect your system arch"
+      ;;
+  esac
+
+  case $(uname -s) in
+    Darwin)
+      os="darwin"
+      host_arch="x86"
+      ;;
+    Linux)
+      os="linux"
+      ;;
+    *)
+      die "cannot detect your system os"
+      ;;
+  esac
+  GNUMAKE=${NDK}/prebuilt/$os-$host_arch/bin/make
+
+  for d in $( ls -1 "${NDK}/toolchains/" ); do
+    name=$(basename "$d")
+    case $name in
+      *clang*) continue
+      ;;
+      $CROSS_COMPILE-*)
+      NDK_TOOLCHAIN="${NDK}/toolchains/$name/prebuilt/$os-$host_arch/bin"
+      tmp="${NDK_TOOLCHAIN}/${CROSS_COMPILE}-"
+      for bin in gcc g++ ld ar ranlib strip; do
+        if [ ! -f "$tmp$bin" ] ; then
+          unset NDK_TOOLCHAIN
+          break
+        fi
+      done
+      ;;
+      *)  continue
+      ;;
+    esac
+  done
+  test "x$NDK_TOOLCHAIN" != "x" || die "cannot find an usable toolchain"
+}
+
+## MAIN ##
+
+arg_parse $@
+PLATFORM="android-$1"
+shift
+check_external_scripts
+
+find_toolchain
+
+export CC=${NDK_TOOLCHAIN}/${CROSS_COMPILE}-gcc
+export CXX=${NDK_TOOLCHAIN}/${CROSS_COMPILE}-g++
+export LD=${NDK_TOOLCHAIN}/${CROSS_COMPILE}-ld
+export AR=${NDK_TOOLCHAIN}/${CROSS_COMPILE}-ar
+export RANLIB=${NDK_TOOLCHAIN}/${CROSS_COMPILE}-ranlib
+export STRIP=${NDK_TOOLCHAIN}/${CROSS_COMPILE}-strip
+
+export ac_cv_func_malloc_0_nonnull=yes
+export ac_cv_func_realloc_0_nonnull=yes
+
+export SYSROOT=${NDK}/platforms/${PLATFORM}/arch-arm
+export CXXFLAGS=--sysroot=${SYSROOT}
+export CFLAGS=--sysroot=${SYSROOT}
+
+argStr=""
+
+while [ "$1" != "" ] ; do
+  argStr="${argStr} $1"
+  shift
+done
+
+./configure --enable-shared=no "--host=$CROSS_COMPILE" "--target=$CROSS_COMPILE" "--prefix=$SYSROOT/usr" LIBS="-lc -lgcc" $argStr && \
+$GNUMAKE -j$(( $(cat /proc/cpuinfo | grep processor | wc -l) +1 ))

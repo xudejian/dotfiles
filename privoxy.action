@@ -12,11 +12,9 @@ shop      = -crunch-all-cookies allow-popups fragile
 allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
 auto-https = +redirect{s@http://@https://@}
 
-polipo-cache = +forward-override{forward 127.0.0.1:8456} -block allow-all-cookies
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
-#polipo = +forward-override{forward 127.0.0.1:8123}
-polipo = goagent
 tor = +forward-override{forward-socks5t 127.0.0.1:9150 .}
+polipo = tor
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
@@ -31,6 +29,8 @@ default = +forward-override{forward .}
 check.torproject.org
 .liveleak.com
 .mingpao.com
+.mixpanel.com
+.cloudfront.net
 
 {auto-https}
 www.google.com.hk
@@ -41,24 +41,9 @@ blogger.com:80
 developer.chrome.com:80
 code.google.com:80
 
-{polipo-cache}
-.bower.herokuapp.com
-.apple.com
-.mzstatic.com
-.phobos.apple.com
-.gnupg.org
-.ruby-lang.org
-.mathjax.org
-.rubygems.org
-.registry.npmjs.org
-.nodejs.org
-nodejs.org
-sequelizejs.com
-
 {polipo}
 .ptt.cc
-.facebook.com
-.android.com
+.facebook.com:443
 .nytimes.com
 feeds.feedburner.com
 developers.facebook.com
@@ -83,25 +68,16 @@ platform.twitter.com
 .c.youtube.com
 .ck101.com
 .tw.myblog.yahoo.com
-.behat.org
+.dropbox.com
 
 {goagent}
-.fastly.net
-.cloudflare.com
 .blogspot.com
 .appspot.com
 www.pandora.com/$
 .pandora.com/radio
-talk.google.com
-groups.google.com
 
-.ngmodules.org
-.typekit.net
 bit.ly
 ow.ly
-.nodejitsu.com
-.railstutorial.org
-nodemanual.org
 .nokogiri.org
 .wordpress.com
 .debian.org
@@ -111,13 +87,12 @@ nodemanual.org
 .businessweek.com
 .igossip.com
 .pixnet.net
-.dropbox.com
 rain.orgfree.com
 vim.runpaint.org
 .ivank.net
 .tjholowaychuk.com
 .huayuworld.org
-.sourceforge.net
+#.sourceforge.net
 .pbwiki.com
 
 {local}
@@ -149,6 +124,7 @@ banner.alimama.com
 frd/http://
 
 {block}
+fonts.googleapis.com
 tongji.zhidao.baidu.com
 /.*stats.gif
 .tanx.com
@@ -174,7 +150,6 @@ a.alimama.cn
 cpro.baidustatic.com
 .baidu.com/cpro
 .doubleclick.net
-.share.baidu.com
 .atm.youku.com
 .lstat.youku.com
 .stat.youku.com
