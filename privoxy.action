@@ -13,16 +13,25 @@ allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
 auto-https = +redirect{s@http://@https://@}
 
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
-tor = +forward-override{forward-socks5t 127.0.0.1:9150 .}
+tor = +forward-override{forward-socks5t 127.0.0.1:9150 .} +client-header-filter{hide-tor-exit-notation}
 polipo = tor
+youtube = tor fragile
+#youtube = tor +add-header{Access-Control-Allow-Origin: https://www.youtube.com} +add-header{Access-Control-Allow-Credentials: true} +add-header{Timing-Allow-Origin: https://www.youtube.com}
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
+
+{fragile}
+mail.google.com
 
 {shop}
 .ebates.cn
 .carters.com
 .coremetrics.com
+
+{youtube}
+.c.youtube.com
+.googlevideo.com
 
 {tor}
 .onion
@@ -65,7 +74,6 @@ trc.taboola.com
 .twimg.com
 .tweetdeck.com:443
 platform.twitter.com
-.c.youtube.com
 .ck101.com
 .tw.myblog.yahoo.com
 .dropbox.com
