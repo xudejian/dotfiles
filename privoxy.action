@@ -50,6 +50,7 @@ blogger.com:80
 www.youtube.com:80
 developer.chrome.com:80
 code.google.com:80
+youtu.be
 
 {polipo}
 .ptt.cc
@@ -78,6 +79,7 @@ platform.twitter.com
 .ck101.com
 .tw.myblog.yahoo.com
 .dropbox.com
+fonts.googleapis.com
 
 {goagent}
 .blogspot.com
@@ -133,7 +135,6 @@ banner.alimama.com
 frd/http://
 
 {block}
-fonts.googleapis.com
 tongji.zhidao.baidu.com
 /.*stats.gif
 .tanx.com
