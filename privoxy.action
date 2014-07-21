@@ -40,6 +40,10 @@ check.torproject.org
 .mingpao.com
 .mixpanel.com
 .cloudfront.net
+talkx.l.google.com:5222
+talk.google.com:5222
+mtalk.google.com:5228
+.html5rocks.com
 
 {auto-https}
 www.google.com.hk
@@ -51,6 +55,7 @@ www.youtube.com:80
 developer.chrome.com:80
 code.google.com:80
 youtu.be
+webcache.googleusercontent.com
 
 {polipo}
 .ptt.cc
@@ -78,8 +83,8 @@ trc.taboola.com
 platform.twitter.com
 .ck101.com
 .tw.myblog.yahoo.com
-.dropbox.com
 fonts.googleapis.com
+sequelizejs.com
 
 {goagent}
 .blogspot.com
@@ -115,6 +120,7 @@ localhost
 .moode.cn
 
 {direct}
+.jd.com
 .hipandora.com
 .dropbox.com:443
 .airasia.com
