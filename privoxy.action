@@ -44,6 +44,7 @@ talkx.l.google.com:5222
 talk.google.com:5222
 mtalk.google.com:5228
 .html5rocks.com
+.pack.google.com:80
 
 {auto-https}
 www.google.com.hk
