@@ -22,10 +22,15 @@ ZSH_THEME="kphoen"
 plugins=(git osx colored-man)
 
 # Customize to your needs...
-export GOPATH=$HOME/github/go
+export PATH=/usr/local/bin:$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$HOME/go
 
 ulimit -n 8192
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 source $ZSH/oh-my-zsh.sh
 export wdurl='http://192.168.0.88:4444/wd/hub'
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+for i in $HOME/src/dotfiles/zsh/*.zsh
+do
+  source $i
+done

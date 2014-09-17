@@ -59,6 +59,8 @@ youtu.be
 webcache.googleusercontent.com
 
 {polipo}
+.wordpress.com
+polymer-project.org
 .ptt.cc
 .facebook.com:443
 .nytimes.com
@@ -121,6 +123,7 @@ localhost
 .moode.cn
 
 {direct}
+ads.staff.xdf.cn
 .jd.com
 .hipandora.com
 .dropbox.com:443
@@ -134,12 +137,6 @@ localhost
 .mmstat.com
 banner.alimama.com
 .10010.com
-
-{+redirect{s@^http://[^/]*/url\?.*url=http%3A%2F%2F([^&]*).*@http://frd/http://$1@}}
-.google.com/url
-
-{+fast-redirects{check-decoded-url}}
-frd/http://
 
 {block}
 tongji.zhidao.baidu.com
