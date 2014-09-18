@@ -24,6 +24,7 @@ plugins=(git osx colored-man)
 # Customize to your needs...
 export PATH=/usr/local/bin:$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/go
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 
 ulimit -n 8192
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
