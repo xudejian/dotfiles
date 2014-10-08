@@ -474,9 +474,9 @@
 	<key>HideActivityIndicator</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
-	<true/>
+	<false/>
 	<key>HideScrollbar</key>
-	<true/>
+	<false/>
 	<key>HideTab</key>
 	<true/>
 	<key>HighlightTabLabels</key>
@@ -527,7 +527,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>269 106 924 485 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 20 1920 1038 0 0 1920 1058 </string>
+	<string>0 42 870 1016 0 0 1920 1058 </string>
 	<key>NeverWarnAboutShortLivedSessions_37004AFC-1006-4B31-AB28-E58187A421B3</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1107,7 +1107,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>0</integer>
+			<integer>10000</integer>
 			<key>Scrollback With Status Bar</key>
 			<false/>
 			<key>Scrollback in Alternate Screen</key>
@@ -1251,7 +1251,7 @@
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
-			<true/>
+			<false/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
