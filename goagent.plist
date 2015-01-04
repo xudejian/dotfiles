@@ -7,9 +7,9 @@
     <key>KeepAlive</key>
     <true/>
     <key>UserName</key>
-		<string>IT001-xu</string>
+		<string>xudejian</string>
     <key>WorkingDirectory</key>
-		<string>/Users/IT001-xu/local/goagent/local/</string>
+		<string>/Users/xudejian/goagent/local/</string>
     <key>ProgramArguments</key>
     <array>
       <string>python</string>

@@ -15,7 +15,7 @@ auto-https = +redirect{s@http://@https://@}
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-socks5t 127.0.0.1:9150 .} +client-header-filter{hide-tor-exit-notation}
 polipo = tor
-youtube = tor fragile
+youtube = goagent fragile
 #youtube = tor +add-header{Access-Control-Allow-Origin: https://www.youtube.com} +add-header{Access-Control-Allow-Credentials: true} +add-header{Timing-Allow-Origin: https://www.youtube.com}
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
@@ -58,6 +58,24 @@ youtu.be
 webcache.googleusercontent.com
 
 {polipo}
+bit.ly
+ow.ly
+.nokogiri.org
+.wordpress.com
+.debian.org
+.slideshare.net
+
+.businessweek.com
+.igossip.com
+.pixnet.net
+rain.orgfree.com
+vim.runpaint.org
+.ivank.net
+.tjholowaychuk.com
+.huayuworld.org
+#.sourceforge.net
+.pbwiki.com
+
 .wordpress.com
 polymer-project.org
 .ptt.cc
@@ -85,33 +103,14 @@ trc.taboola.com
 platform.twitter.com
 .ck101.com
 .tw.myblog.yahoo.com
-fonts.googleapis.com
-sequelizejs.com
+.slideshare.net
+.blogspot.com
+.blogblog.com
+.appspot.com
 
 {goagent}
-.blogspot.com
-.appspot.com
 www.pandora.com/$
 .pandora.com/radio
-
-bit.ly
-ow.ly
-.nokogiri.org
-.wordpress.com
-.debian.org
-.slideshare.net
-.golang.org
-
-.businessweek.com
-.igossip.com
-.pixnet.net
-rain.orgfree.com
-vim.runpaint.org
-.ivank.net
-.tjholowaychuk.com
-.huayuworld.org
-#.sourceforge.net
-.pbwiki.com
 
 {local}
 0.0.0.0
@@ -122,7 +121,7 @@ localhost
 .moode.cn
 
 {direct}
-ads.staff.xdf.cn
+.xdf.cn
 .jd.com
 .hipandora.com
 .dropbox.com:443
@@ -134,7 +133,7 @@ ads.staff.xdf.cn
 .taobao.com
 .alipay.com
 .mmstat.com
-banner.alimama.com
+.alimama.com
 .10010.com
 
 {block}
@@ -152,23 +151,18 @@ tongji.zhidao.baidu.com
 .tanx.com
 /player/.*pageer.swf
 show.g.mediav.com
-track.cupid.qiyi.com
 .ggxt.net
-.qiyi.com/adpb.gif
 /.*preloader.swf
 .admaster.com.cn
-.qiyi.com/vpb.gif
-.com/stat.html
 .51.la
 .cookie4you.com
-.qiyi.com/cfp.gif
 .miaozhen.com
 a.alimama.cn
 .csbew.com
 .icast.cn
 .91adv.com
 .acs86.com
-#.cbjs.baidu.com
+.cbjs.baidu.com
 cpro.baidustatic.com
 .baidu.com/cpro
 .doubleclick.net

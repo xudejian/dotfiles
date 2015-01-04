@@ -23,12 +23,15 @@ plugins=(git osx colored-man)
 
 # Customize to your needs...
 export CC=clang
-export CFLAGS='-I/usr/include -I/usr/local/include'
+export CFLAGS='-I/usr/include -I/usr/local/include -I/usr/local/opt/libxslt/include'
 export CXXFLAGS=$CFLAGS
-export LDFLAGS='-L/usr/lib -L/usr/local/lib'
-export PATH=/usr/local/bin:$PATH:/usr/local/opt/go/libexec/bin
+export CPPFLAGS=$CXXFLAGS
+export LDFLAGS='-L/usr/lib -L/usr/local/lib -L/usr/local/opt/libxslt/lib'
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/go
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 ulimit -n 8192
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
