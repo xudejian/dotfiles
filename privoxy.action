@@ -15,23 +15,32 @@ auto-https = +redirect{s@http://@https://@}
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-socks5t 127.0.0.1:9150 .} +client-header-filter{hide-tor-exit-notation}
 polipo = tor
-youtube = goagent fragile
-#youtube = tor +add-header{Access-Control-Allow-Origin: https://www.youtube.com} +add-header{Access-Control-Allow-Credentials: true} +add-header{Timing-Allow-Origin: https://www.youtube.com}
+google = tor
+youtube = tor fragile
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
 
 {fragile}
+localhost
 mail.google.com
 
 {shop}
+.360buyimg.com
+.jd.com
 .ebates.cn
 .carters.com
 .coremetrics.com
+.tmall.com
+.tbcdn.cn
+
+{google}
+.blogspot.com
+.appspot.com
+.gorillatoolkit.org
 
 {youtube}
 .c.youtube.com
-.googlevideo.com
 
 {tor}
 .onion
@@ -44,6 +53,8 @@ talk.google.com:5222
 mtalk.google.com:5228
 .html5rocks.com
 .pack.google.com:80
+.nextmedia.com
+.teepr.com
 
 {auto-https}
 www.google.com.hk
@@ -60,37 +71,23 @@ webcache.googleusercontent.com
 {polipo}
 bit.ly
 ow.ly
-.nokogiri.org
 .wordpress.com
-.debian.org
 .slideshare.net
-
+.nextmedia.com
 .businessweek.com
-.igossip.com
 .pixnet.net
 rain.orgfree.com
 vim.runpaint.org
 .ivank.net
-.tjholowaychuk.com
-.huayuworld.org
-#.sourceforge.net
-.pbwiki.com
 
 .wordpress.com
-polymer-project.org
 .ptt.cc
 .facebook.com:443
-.nytimes.com
-feeds.feedburner.com
 developers.facebook.com
 .ihid.co.uk
 .iask.ca
 .rcinet.ca
-.dw.de
-.dwnews.com
 .hidemyass.com
-.igfw.net
-.chinagfw.org
 .caonima.biz
 trc.taboola.com
 .aboluowang.com
@@ -104,9 +101,6 @@ platform.twitter.com
 .ck101.com
 .tw.myblog.yahoo.com
 .slideshare.net
-.blogspot.com
-.blogblog.com
-.appspot.com
 
 {goagent}
 www.pandora.com/$
@@ -117,13 +111,9 @@ www.pandora.com/$
 127.
 192.168.
 localhost
-.douxiu.com
-.moode.cn
 
 {direct}
 .xdf.cn
-.jd.com
-.hipandora.com
 .dropbox.com:443
 .airasia.com
 .agoda.net
@@ -137,14 +127,6 @@ localhost
 .10010.com
 
 {block}
-.tj.video.qq.com
-.trace.qq.com
-.pingfore.qq.com
-.sns.video.qq.com
-.l.qq.com
-.tencentmind.com
-.rcgi.video.qq.com
-.aid.video.qq.com
 
 tongji.zhidao.baidu.com
 /.*stats.gif
@@ -165,28 +147,18 @@ a.alimama.cn
 .cbjs.baidu.com
 cpro.baidustatic.com
 .baidu.com/cpro
-.doubleclick.net
-.atm.youku.com
-.lstat.youku.com
-.stat.youku.com
 .dcads.sina.com.cn
 .adsunion.com
-.googlesyndication.com
 807.tianya.cn
 806.tianya.cn
 .cnzz.com
 ggmm777.com
 images.sohu.com
 .admaster.com.cn/i
-.atm.youku.com/crossdomain.xml
-.navi.youku.com/crossdomain.xml
 .irs01.
 .sina.com.cn/crossdomain.xml
-.tudou.com/tdcm/adcontrol
-.google-analytics.com/urchin
 .cnbeta.com/.*\.js
 img.cnbeta.com/[^/]*\.(gif|png|jpg)
-da.feedsportal.com/.*\.img
 .baifendian.com
 .allyes.com
 hm.baidu.com

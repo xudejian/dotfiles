@@ -27,9 +27,10 @@ export CFLAGS='-I/usr/include -I/usr/local/include -I/usr/local/opt/libxslt/incl
 export CXXFLAGS=$CFLAGS
 export CPPFLAGS=$CXXFLAGS
 export LDFLAGS='-L/usr/lib -L/usr/local/lib -L/usr/local/opt/libxslt/lib'
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
 export GOPATH=$HOME/go
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
