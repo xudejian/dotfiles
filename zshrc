@@ -22,13 +22,7 @@ ZSH_THEME="kphoen"
 plugins=(git osx colored-man)
 
 # Customize to your needs...
-export CC=clang
-export CFLAGS='-I/usr/include -I/usr/local/include -I/usr/local/opt/libxslt/include'
-export CXXFLAGS=$CFLAGS
-export CPPFLAGS=$CXXFLAGS
-export LDFLAGS='-L/usr/lib -L/usr/local/lib -L/usr/local/opt/libxslt/lib'
-
-export GOPATH=$HOME/go
+export GOPATH=$HOME
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
