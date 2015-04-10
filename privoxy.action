@@ -16,7 +16,6 @@ goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-socks5t 127.0.0.1:9150 .} +client-header-filter{hide-tor-exit-notation}
 polipo = tor
 google = tor
-youtube = tor fragile
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
@@ -40,10 +39,6 @@ mail.google.com
 .blogspot.com
 .appspot.com
 .gorillatoolkit.org
-plus.google.com
-
-{youtube}
-.c.youtube.com
 
 {tor}
 .onion
@@ -65,10 +60,8 @@ www.facebook.com:80
 developer.android.com:80
 twitter.com:80
 blogger.com:80
-www.youtube.com:80
 developer.chrome.com:80
 code.google.com:80
-youtu.be
 webcache.googleusercontent.com
 
 {polipo}
@@ -131,7 +124,9 @@ localhost
 .10010.com
 
 {block}
-
+.3.cn
+.ifengimg.com/ifeng/sources
+.ifengimg.com/mappa
 tongji.zhidao.baidu.com
 /.*stats.gif
 .tanx.com
