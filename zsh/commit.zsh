@@ -1,6 +1,5 @@
 alias gc='my_git_commit -v'
 alias gc!='my_git_commit -v --amend'
-compdef _git my_git_commit=git-commit
 
 my_git_commit () {
   if test "$(git config core.holiday)" = 'true'
