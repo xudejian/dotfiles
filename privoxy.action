@@ -8,10 +8,11 @@
 
 fragile   = -block -crunch-all-cookies -filter -fast-redirects -hide-referer -prevent-compression
 block     = +block-as-image +handle-as-empty-document
-shop      = -crunch-all-cookies allow-popups fragile
+shop      = fragile
 allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
 auto-https = +redirect{s@http://@https://@}
 
+mynet = +forward-override{forward 127.0.0.1:8080} allow-all-cookies fragile
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-socks5t 127.0.0.1:9150 .} +client-header-filter{hide-tor-exit-notation}
 polipo = tor
@@ -19,10 +20,21 @@ google = tor
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
+default = local
+
+{mynet}
+#.cnbeta.com
+#.baidu.com
 
 {fragile}
 localhost
-mail.google.com
+.google.com
+.amazon.
+amazoncustomerservice.d2.sc.omtrdc.net
+paypal.com
+paypal.d1.sc.omtrdc.net
+.ecpic.com.cn
+.cpic.
 
 {shop}
 .360buyimg.com
@@ -34,6 +46,7 @@ mail.google.com
 .tbcdn.cn
 .taobao.com
 .tanx.com
+.3.cn
 
 {google}
 .blogspot.com
@@ -46,11 +59,7 @@ check.torproject.org
 .liveleak.com
 .mingpao.com
 .mixpanel.com
-talkx.l.google.com:5222
-talk.google.com:5222
-mtalk.google.com:5228
 .html5rocks.com
-.pack.google.com:80
 .nextmedia.com
 .teepr.com
 
@@ -63,9 +72,10 @@ blogger.com:80
 developer.chrome.com:80
 code.google.com:80
 webcache.googleusercontent.com
+bit.ly:80
 
 {polipo}
-bit.ly
+#bit.ly
 ow.ly
 .wordpress.com
 .slideshare.net
@@ -78,8 +88,6 @@ vim.runpaint.org
 
 .wordpress.com
 .ptt.cc
-.facebook.com:443
-developers.facebook.com
 .ihid.co.uk
 .iask.ca
 .rcinet.ca
@@ -98,6 +106,7 @@ platform.twitter.com
 .tw.myblog.yahoo.com
 .slideshare.net
 .polymer-project.org
+#.facebook.com
 
 {goagent}
 www.pandora.com/$
@@ -108,8 +117,10 @@ www.pandora.com/$
 127.
 192.168.
 localhost
+.amap.com
 
 {direct}
+.japanpost.jp
 .xdf.cn
 .dropbox.com:443
 .airasia.com
@@ -122,9 +133,10 @@ localhost
 .mmstat.com
 .alimama.com
 .10010.com
+.qq.com
+.map.bdstatic.com
 
 {block}
-.3.cn
 .ifengimg.com/ifeng/sources
 .ifengimg.com/mappa
 tongji.zhidao.baidu.com
@@ -156,8 +168,8 @@ images.sohu.com
 .admaster.com.cn/i
 .irs01.
 .sina.com.cn/crossdomain.xml
-.cnbeta.com/.*\.js
-img.cnbeta.com/[^/]*\.(gif|png|jpg)
+#.cnbeta.com/.*\.js
+#img.cnbeta.com/[^/]*\.(gif|png|jpg)
 .baifendian.com
 .allyes.com
 hm.baidu.com
