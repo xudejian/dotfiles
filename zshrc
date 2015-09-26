@@ -23,7 +23,7 @@ plugins=(git osx colored-man)
 
 # Customize to your needs...
 export GOPATH=$HOME
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:./node_modules/.bin:$PATH
 export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
