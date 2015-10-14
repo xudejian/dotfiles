@@ -35,6 +35,7 @@ paypal.com
 paypal.d1.sc.omtrdc.net
 .ecpic.com.cn
 .cpic.
+.images-amazon.com
 
 {shop}
 .360buyimg.com
@@ -52,6 +53,7 @@ paypal.d1.sc.omtrdc.net
 .blogspot.com
 .appspot.com
 .gorillatoolkit.org
+.googlevideo.com
 
 {tor}
 .onion
@@ -106,7 +108,7 @@ platform.twitter.com
 .tw.myblog.yahoo.com
 .slideshare.net
 .polymer-project.org
-#.facebook.com
+.facebook.com
 
 {goagent}
 www.pandora.com/$
@@ -135,8 +137,11 @@ localhost
 .10010.com
 .qq.com
 .map.bdstatic.com
+.stock.finance.sina.com.cn
 
 {block}
+.googleadservices.com
+.googletagservices.com
 .ifengimg.com/ifeng/sources
 .ifengimg.com/mappa
 tongji.zhidao.baidu.com
@@ -167,7 +172,6 @@ ggmm777.com
 images.sohu.com
 .admaster.com.cn/i
 .irs01.
-.sina.com.cn/crossdomain.xml
 #.cnbeta.com/.*\.js
 #img.cnbeta.com/[^/]*\.(gif|png|jpg)
 .baifendian.com

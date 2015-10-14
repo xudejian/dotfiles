@@ -19,18 +19,17 @@ ZSH_THEME="kphoen"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx colored-man)
+plugins=(git osx colored-man golang)
 
 # Customize to your needs...
 export GOPATH=$HOME
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:node_modules/.bin:$PATH
 export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 ulimit -n 8192
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-export wdurl='http://192.168.0.88:4444/wd/hub'
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 for i in $HOME/src/dotfiles/zsh/*.zsh
 do
