@@ -1,5 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="kphoen"
+DISABLE_UPDATE_PROMPT=true
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -35,3 +36,5 @@ for i in $HOME/src/dotfiles/zsh/*.zsh
 do
   source $i
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
