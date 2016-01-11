@@ -29,7 +29,6 @@ export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-ulimit -n 8192
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 for i in $HOME/src/dotfiles/zsh/*.zsh
