@@ -20,7 +20,7 @@ DISABLE_UPDATE_PROMPT=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx colored-man golang)
+plugins=(git osx colored-man golang tmux)
 
 # Customize to your needs...
 export GOPATH=$HOME
