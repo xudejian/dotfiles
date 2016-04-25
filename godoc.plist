@@ -10,6 +10,11 @@
 		<string>xudejian</string>
     <key>WorkingDirectory</key>
 		<string>/Users/xudejian</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>GOPATH</key>
+      <string>/Users/xudejian</string>
+    </dict>
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/bin/godoc</string>
