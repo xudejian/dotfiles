@@ -22,10 +22,6 @@ direct = local
 default = +forward-override{forward .}
 default = local
 
-{mynet}
-#.cnbeta.com
-#.baidu.com
-
 {fragile}
 localhost
 .google.com
@@ -53,8 +49,7 @@ paypal.d1.sc.omtrdc.net
 {google}
 .blogspot.com
 .appspot.com
-.gorillatoolkit.org
-.googlevideo.com
+#.gorillatoolkit.org
 
 {tor}
 .onion
@@ -65,7 +60,6 @@ check.torproject.org
 .html5rocks.com
 .nextmedia.com
 .teepr.com
-shop.hipp.de
 gist.github.com
 
 {auto-https}
@@ -90,6 +84,8 @@ ow.ly
 rain.orgfree.com
 vim.runpaint.org
 .ivank.net
+.facebook.com
+.dropbox.com
 
 .wordpress.com
 .ptt.cc
@@ -99,20 +95,14 @@ vim.runpaint.org
 .hidemyass.com
 .caonima.biz
 trc.taboola.com
-.aboluowang.com
-.git-scm.com
 .vimeo.com
-.t.co
-.twitter.com:443
-.twimg.com
-.tweetdeck.com:443
+t.co
+.twitter.com
+medium.com
 platform.twitter.com
 .ck101.com
-.tw.myblog.yahoo.com
 .slideshare.net
-.polymer-project.org
-.facebook.com
-.fbcdn.net
+.instagram.com
 
 {goagent}
 www.pandora.com/$
@@ -144,6 +134,8 @@ localhost
 .stock.finance.sina.com.cn
 
 {block}
+#.cnbeta.com
+#.tieba.baidu.com
 .googleadservices.com
 .googletagservices.com
 .ifengimg.com/ifeng/sources
@@ -152,7 +144,7 @@ tongji.zhidao.baidu.com
 /.*stats.gif
 .tanx.com
 /player/.*pageer.swf
-show.g.mediav.com
+.mediav.com
 .ggxt.net
 /.*preloader.swf
 .admaster.com.cn
@@ -174,7 +166,6 @@ cpro.baidustatic.com
 .cnzz.com
 ggmm777.com
 images.sohu.com
-.admaster.com.cn/i
 .irs01.
 #.cnbeta.com/.*\.js
 #img.cnbeta.com/[^/]*\.(gif|png|jpg)
