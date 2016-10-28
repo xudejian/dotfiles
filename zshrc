@@ -23,8 +23,11 @@ DISABLE_UPDATE_PROMPT=true
 plugins=(git osx colored-man golang tmux)
 
 # Customize to your needs...
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 export GOPATH=$HOME
 export PATH=/usr/local/bin:/usr/local/sbin:node_modules/.bin:$PATH
+export PATH=$HOME/src/dotfiles/bin:$PATH
 export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
@@ -36,4 +39,8 @@ do
   source $i
 done
 
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
