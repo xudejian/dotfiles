@@ -1,12 +1,12 @@
 #!/bin/bash
 main() {
-	SCPPATH="$(git config --local remote.$1.path)"
-  if test "$SCPPATH" = ''
+	REMOTEPATH="$(git config --local remote.$1.path)"
+  if test "$REMOTEPATH" = ''
   then
 		echo "body, you need set remote.$1.path=your remote project path"
 		return
   else
-		git ls-files -m | xargs -I {} scp {} $SYNCPATH/{}
+		git ls-files -m | xargs -I {} scp {} $REMOTEPATH/{}
   fi
 }
 

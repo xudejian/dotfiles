@@ -14,7 +14,7 @@ auto-https = +redirect{s@http://@https://@}
 
 mynet = +forward-override{forward 127.0.0.1:8080} allow-all-cookies fragile
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
-tor = +forward-override{forward-socks5t 127.0.0.1:9150 .} +client-header-filter{hide-tor-exit-notation}
+tor = +forward-override{forward-socks5t 127.0.0.1:9149 .} +client-header-filter{hide-tor-exit-notation}
 polipo = tor
 google = tor
 local = +forward-override{forward .} -block shop allow-all-cookies
@@ -34,6 +34,7 @@ paypal.d1.sc.omtrdc.net
 .images-amazon.com
 
 {shop}
+.apple.com
 .360buyimg.com
 .jd.com
 .ebates.cn
@@ -44,12 +45,26 @@ paypal.d1.sc.omtrdc.net
 .taobao.com
 .tanx.com
 .3.cn
-.amazon.co.jp
+.amazon.
 
 {google}
-.blogspot.com
-.appspot.com
 #.gorillatoolkit.org
+.google.com
+.googleapis.com
+.googleapi.com
+.googleusercontent.com
+.gstatic.com
+.golang.org
+.golangnews.com
+.youtu.be
+.youtube.com
+.ytimg.com
+.googlevideo.com
+.tensorflow.org
+.chromium.org
+.googlecode.com
+.blogspot.com
+.github.com
 
 {tor}
 .onion
@@ -57,25 +72,17 @@ check.torproject.org
 .liveleak.com
 .mingpao.com
 .mixpanel.com
-.html5rocks.com
 .nextmedia.com
 .teepr.com
-gist.github.com
 
 {auto-https}
-www.google.com.hk
-www.facebook.com:80
-developer.android.com:80
-twitter.com:80
-blogger.com:80
-developer.chrome.com:80
-code.google.com:80
 webcache.googleusercontent.com
-bit.ly:80
 
 {polipo}
-#bit.ly
+.bit.ly
+.bbc.com
 ow.ly
+.gist.github.com
 .wordpress.com
 .slideshare.net
 .nextmedia.com
@@ -85,7 +92,9 @@ rain.orgfree.com
 vim.runpaint.org
 .ivank.net
 .facebook.com
+.fbcdn.net
 .dropbox.com
+.wikipedia.org
 
 .wordpress.com
 .ptt.cc
@@ -99,7 +108,6 @@ trc.taboola.com
 t.co
 .twitter.com
 medium.com
-platform.twitter.com
 .ck101.com
 .slideshare.net
 .instagram.com
