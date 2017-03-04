@@ -13,6 +13,8 @@ function FindProxyForURL(url, host) {
 
     var list = [
         'google.com',
+        'google.co',
+				'googlevideo.com',
         't.co',
         'twitter.com',
         'twimg.com',
