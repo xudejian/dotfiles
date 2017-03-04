@@ -5,3 +5,8 @@
 [ -f ~/.ctags ] || ln -s $PWD/ctags.conf ~/.ctags
 [ -f ~/.editorconfig ] || ln -s $PWD/.editorconfig ~/.editorconfig
 [ -f ~/.ptconfig.toml ] || ln -s $PWD/.ptconfig.toml ~/.ptconfig.toml
+
+if [ ! -f ~/.ssh/config ]; then
+	mkdir -p ~/.ssh
+	cp $PWD/ssh_config ~/.ssh/config
+fi
