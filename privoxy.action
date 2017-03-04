@@ -15,8 +15,9 @@ auto-https = +redirect{s@http://@https://@}
 mynet = +forward-override{forward 127.0.0.1:8080} allow-all-cookies fragile
 goagent = +forward-override{forward 127.0.0.1:8087} allow-all-cookies
 tor = +forward-override{forward-socks5t 127.0.0.1:9149 .} +client-header-filter{hide-tor-exit-notation}
-polipo = tor
-google = tor
+ss = +forward-override{forward-socks5t 192.168.1.88:9149 .}
+polipo = ss
+google = ss
 local = +forward-override{forward .} -block shop allow-all-cookies
 direct = local
 default = +forward-override{forward .}
@@ -49,6 +50,7 @@ paypal.d1.sc.omtrdc.net
 
 {google}
 #.gorillatoolkit.org
+.google.com.hk
 .google.com
 .googleapis.com
 .googleapi.com
@@ -64,7 +66,9 @@ paypal.d1.sc.omtrdc.net
 .chromium.org
 .googlecode.com
 .blogspot.com
-.github.com
+.appr.tc
+.googlesource.com
+.appspot.com
 
 {tor}
 .onion
@@ -124,6 +128,7 @@ localhost
 .amap.com
 
 {direct}
+.aliyun.com
 .japanpost.jp
 .xdf.cn
 .dropbox.com:443
@@ -140,6 +145,7 @@ localhost
 .qq.com
 .map.bdstatic.com
 .stock.finance.sina.com.cn
+dl.google.com
 
 {block}
 #.cnbeta.com

@@ -20,7 +20,7 @@ DISABLE_UPDATE_PROMPT=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx colored-man golang tmux vim-interaction)
+plugins=(git osx colored-man golang tmux docker)
 
 # Customize to your needs...
 export LC_ALL=en_US.UTF-8
@@ -28,9 +28,9 @@ export LANG=en_US.UTF-8
 export PATH=/usr/local/bin:/usr/local/sbin:node_modules/.bin:$PATH
 export PATH=$HOME/src/dotfiles/bin:$PATH
 
-export GOPATH=$HOME
-[ -z $GOROOT ] && export GOROOT=`go env GOROOT`
-export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$HOME/go
+[ -z $GOROOT ] && export GOROOT=/usr/local/opt/go/libexec
+export PATH=$GOPATH/bin:$PATH:$GOROOT/bin
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export ANDROID_HOME=/usr/local/opt/android-sdk
@@ -38,11 +38,9 @@ export MONO_GAC_PREFIX="/usr/local"
 
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
-for i in $HOME/src/dotfiles/zsh/*.zsh
-do
-  source $i
-done
 
+export http_proxy="http://192.168.1.88:8118"
+export https_proxy=$http_proxy
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/dist \
@@ -50,12 +48,12 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+alias rm=trash
 
-which trash > /dev/null 2>&1 && alias rm=trash
-
-#vim -g --version > /dev/null 2>&1 && alias vi='vim -g --remote-tab-silent'
-alias aag='ag -S --pager "less -r"'
+alias vi='gvim --remote-tab-silent'
 gag () {
-  ag -S --pager "less -r" "$@" `git rev-parse --show-toplevel 2>/dev/null`
+  pt "$@" `git rev-parse --show-toplevel 2>/dev/null`
 }
+
+export DEPOT_TOOLS_UPDATE=0
+export PATH=$PATH:$HOME/bin/depot_tools

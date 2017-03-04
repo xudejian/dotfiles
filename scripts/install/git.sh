@@ -2,7 +2,7 @@
 DIR=`pwd`
 [ -f $DIR/gitignore_global ] && git config --global core.excludesfile $DIR/gitignore_global
 
-[ -f $DIR/git_template ] && git config --global init.templatedir ~/src/dotfiles/git_template
+[ -f $DIR/git_template ] && git config --global init.templatedir $DIR/git_template
 
 git config --global user.email 'xudejian2008@gmail.com'
 git config --global user.name 'Dejian Xu'
@@ -19,4 +19,5 @@ git config --global alias.vimodify 'for i in $(git ls-files -m 2>/dev/null);do v
 
 git config --global svn.rmdir true
 
+git config --global branch.autosetupmerge always
 git config --global branch.autosetuprebase always

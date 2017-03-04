@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*.apk
 
 # Packages #
 ############
@@ -48,3 +49,5 @@ node_modules/
 *.swo
 *~
 cscope.*
+Temp/
+obj/
