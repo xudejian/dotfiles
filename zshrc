@@ -39,7 +39,7 @@ export MONO_GAC_PREFIX="/usr/local"
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
-export http_proxy="http://192.168.1.88:8118"
+export http_proxy="http://127.0.0.1:8118"
 export https_proxy=$http_proxy
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
