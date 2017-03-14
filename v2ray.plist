@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>v2ray</string>
+    <key>UserName</key>
+    <string>xudejian</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/xudejian/src/dotfiles</string>
+    <key>ProgramArguments</key>
+    <array>
+	    <string>bin/v2ray</string>
+	    <string>-config</string>
+	    <string>v2ray.json</string>
+    </array>
+    <key>StandardErrorPath</key>
+    <string>/tmp/v2ray.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+  </dict>
+</plist>
