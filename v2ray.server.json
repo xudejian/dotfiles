@@ -95,8 +95,8 @@
   },
   "transport": {
     "kcpSettings": {
-      "uplinkCapacity": 2,
-      "downlinkCapacity": 20
+      "uplinkCapacity": 10,
+      "downlinkCapacity": 100
     }
   }
 }

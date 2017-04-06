@@ -13,10 +13,34 @@
 			"ip": "127.0.0.1"
 		}
 	},
+	"inboundDetour": [
+		{
+			"port": 2080,
+			"protocol": "http",
+			"settings": {}
+		}
+	],
 	"outbound": {
-		"protocol": "freedom",
-		"settings": {},
-		"tag": "direct"
+		"protocol": "vmess",
+		"tag": "blocked",
+		"settings": {
+			"vnext": [
+				{
+					"address": "mylinode",
+					"port": 26213,
+					"users": [
+						{
+							"id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
+							"alterId": 32,
+							"security": "auto"
+						}
+					]
+				}
+			]
+		},
+		"streamSettings": {
+			"network": "kcp"
+		}
 	},
 	"outboundDetour": [
 		{
@@ -33,28 +57,6 @@
 				"response": {
 					"type": "http"
 				}
-			}
-		},
-		{
-			"protocol": "vmess",
-			"tag": "blocked",
-			"settings": {
-				"vnext": [
-					{
-						"address": "mylinode",
-						"port": 26213,
-						"users": [
-							{
-								"id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
-								"alterId": 32,
-								"security": "auto"
-							}
-						]
-					}
-				]
-			},
-			"streamSettings": {
-				"network": "kcp"
 			}
 		}
 	],
@@ -75,67 +77,8 @@
 	"routing": {
 		"strategy": "rules",
 		"settings": {
-			"domainStrategy": "IPIfNonMatch",
+			"domainStrategy": "AsIs",
 			"rules": [
-				{
-					"type": "field",
-					"port": "1-52",
-					"outboundTag": "direct"
-				},
-				{
-					"type": "field",
-					"port": "54-79",
-					"outboundTag": "direct"
-				},
-				{
-					"type": "field",
-					"port": "81-442",
-					"outboundTag": "direct"
-				},
-				{
-					"type": "field",
-					"port": "444-65535",
-					"outboundTag": "direct"
-				},
-				{
-					"type": "chinasites",
-					"outboundTag": "direct"
-				},
-				{
-					"type": "field",
-					"ip": [
-						"0.0.0.0/8",
-						"10.0.0.0/8",
-						"100.64.0.0/10",
-						"127.0.0.0/8",
-						"169.254.0.0/16",
-						"172.16.0.0/12",
-						"192.0.0.0/24",
-						"192.0.2.0/24",
-						"192.168.0.0/16",
-						"198.18.0.0/15",
-						"198.51.100.0/24",
-						"203.0.113.0/24",
-						"::1/128",
-						"fc00::/7",
-						"fe80::/10"
-					],
-					"outboundTag": "direct"
-				},
-				{
-					"type": "chinaip",
-					"outboundTag": "direct"
-				},
-				{
-					"type": "field",
-					"domain": [
-						"baidu.com",
-						"qq.com",
-						"localhost",
-						".cn"
-					],
-					"outboundTag": "direct"
-				},
 				{
 					"type": "field",
 					"domain": [
@@ -145,46 +88,32 @@
 					"outboundTag": "adblock"
 				},
 				{
-					"type": "field",
-					"domain": [
-						"google.co",
-						"google.fr",
-						"googlevideo.co",
-						"youtube.com",
-						"ytimg.com",
-						"ggpht.com",
-						"googleusercontent.com",
-						"golang.org",
-						"googleapis.com",
-						"youtu.be",
-						"gstatic.com",
-						"appspot.co",
-						"slideshare.net",
-						"gist.github.com",
-						"wikipedia.org",
-						"instagram.com",
-						"blogspot.co",
-						"android.com",
-						"t.co",
-						"twitter.com",
-						"twimg.com",
-						"tinypic.com",
-						"twitpic.com",
-						"bitly.com",
-						"yfrog.com",
-						"facebook.com",
-						"fbcdn.net",
-						"medium.com"
-					],
-					"outboundTag": "blocked"
-				}
+          "type": "chinaip",
+          "outboundTag": "direct"
+        },
+				{
+					"type": "chinasites",
+					"outboundTag": "direct"
+				},
+				{
+          "type": "field",
+          "domain": [
+            "autoforce.net",
+            "qq.com",
+            "github.com",
+            "china",
+            "baidu.com",
+            ".cn"
+          ],
+          "outboundTag": "direct"
+        }
 			]
 		}
 	},
 	"transport": {
 		"kcpSettings": {
-			"uplinkCapacity": 1,
-			"downlinkCapacity": 10
+			"uplinkCapacity": 20,
+			"downlinkCapacity": 100
 		}
 	}
 }

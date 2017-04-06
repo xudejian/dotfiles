@@ -1,0 +1,156 @@
+{
+	"log": {
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log",
+		"loglevel": "warning"
+	},
+  "inbound": {
+    "port": 26213,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
+					"email": "c8d@v2ray.com",
+          "level": 1,
+          "alterId": 32
+        }
+      ],
+			"detour": {
+				"to": "detour"
+			}
+    },
+		"streamSettings": {
+			"network": "kcp"
+		}
+  },
+	"inboundDetour": [
+		{
+			"protocol": "vmess",
+			"port": "10000-20000",
+			"tag": "detour",
+			"settings": {
+				"default": {
+					"level": 1,
+					"alterId": 32
+				}
+			},
+			"allocate": {
+				"strategy": "random",
+				"concurrency": 2,
+				"refresh": 5
+			},
+			"streamSettings": {
+				"network": "kcp"
+			}
+    }
+	],
+	"outbound": {
+		"protocol": "vmess",
+		"tag": "blocked",
+		"settings": {
+			"vnext": [
+				{
+					"address": "mylinode",
+					"port": 26213,
+					"users": [
+						{
+							"id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
+							"alterId": 32,
+							"security": "auto"
+						}
+					]
+				}
+			]
+		},
+		"streamSettings": {
+			"network": "kcp"
+		}
+	},
+	"outboundDetour": [
+		{
+			"protocol": "freedom",
+			"settings": {},
+			"tag": "direct"
+		},
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "deny"
+    }
+	],
+	"dns": {
+		"hosts": {
+			"c.docs.google.com": "173.194.12.7",
+			"googlevideo.com": "64.15.115.88",
+			"redirector.googlevideo.com": "203.208.43.99",
+			"storage.googleapis.com": "74.125.140.128",
+			"commondatastorage.googleapis.com": "216.58.192.144",
+			"dl.google.com": "203.208.39.230",
+			"dl-ssl.google.com": "203.208.39.230"
+		},
+		"servers": [
+			"localhost"
+		]
+	},
+	"routing": {
+		"strategy": "rules",
+		"settings": {
+			"domainStrategy": "AsIs",
+			"rules": [
+				{
+					"type": "chinaip",
+					"outboundTag": "direct"
+				},
+				{
+					"type": "chinasites",
+					"outboundTag": "direct"
+				},
+				{
+					"type": "field",
+					"ip": [
+						"0.0.0.0/8",
+						"10.0.0.0/8",
+						"100.64.0.0/10",
+						"127.0.0.0/8",
+						"169.254.0.0/16",
+						"172.16.0.0/12",
+						"192.0.0.0/24",
+						"192.0.2.0/24",
+						"192.168.0.0/16",
+						"198.18.0.0/15",
+						"198.51.100.0/24",
+						"203.0.113.0/24",
+						"::1/128",
+						"fc00::/7",
+						"fe80::/10"
+					],
+					"outboundTag": "deny"
+				},
+				{
+					"type": "field",
+					"domain": [
+						"baidu.com",
+						"qq.com",
+						".cn"
+					],
+					"outboundTag": "direct"
+				},
+				{
+					"type": "field",
+					"domain": [
+						"msg.71.am",
+						"17un.co"
+					],
+					"outboundTag": "deny"
+				}
+			]
+		}
+	},
+	"transport": {
+		"kcpSettings": {
+			"uplinkCapacity": 20,
+			"downlinkCapacity": 100
+		}
+	}
+}
