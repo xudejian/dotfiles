@@ -13,37 +13,15 @@
           "id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
 					"email": "c8d@v2ray.com",
           "level": 1,
-          "alterId": 32
+          "alterId": 64
         }
-      ],
-			"detour": {
-				"to": "detour"
-			}
+      ]
     },
 		"streamSettings": {
 			"network": "kcp"
 		}
   },
 	"inboundDetour": [
-		{
-			"protocol": "vmess",
-			"port": "10000-20000",
-			"tag": "detour",
-			"settings": {
-				"default": {
-					"level": 1,
-					"alterId": 32
-				}
-			},
-			"allocate": {
-				"strategy": "random",
-				"concurrency": 2,
-				"refresh": 5
-			},
-			"streamSettings": {
-				"network": "kcp"
-			}
-		},
 		{
       "protocol": "shadowsocks",
       "port": 443,
@@ -58,45 +36,10 @@
     "protocol": "freedom",
     "settings": {}
   },
-  "outboundDetour": [
-    {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "routing": {
-    "strategy": "rules",
-    "settings": {
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "0.0.0.0/8",
-            "10.0.0.0/8",
-            "100.64.0.0/10",
-            "127.0.0.0/8",
-            "169.254.0.0/16",
-            "172.16.0.0/12",
-            "192.0.0.0/24",
-            "192.0.2.0/24",
-            "192.168.0.0/16",
-            "198.18.0.0/15",
-            "198.51.100.0/24",
-            "203.0.113.0/24",
-            "::1/128",
-            "fc00::/7",
-            "fe80::/10"
-          ],
-          "outboundTag": "blocked"
-        }
-      ]
-    }
-  },
   "transport": {
     "kcpSettings": {
-      "uplinkCapacity": 10,
-      "downlinkCapacity": 100
+      "uplinkCapacity": 100,
+      "downlinkCapacity": 1000
     }
   }
 }
