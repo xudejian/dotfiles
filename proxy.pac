@@ -1,4 +1,13 @@
 var domains = {
+'pcs.baidu.com': 1,
+'s3.amazonaws.com': 1,
+'torproject.org': 1,
+'line.me': 1,
+'line.naver.jp': 1,
+'webrtc.org': 1,
+'goo.gl': 1,
+'pinterest.com': 1,
+'pinimg.com': 1,
 'gorillatoolkit.org': 1,
 'admob.com': 1,
 'android.com': 1,
@@ -53,10 +62,12 @@ var domains = {
 'twimg.com': 1,
 'medium.com': 1,
 'ck101.com': 1,
+'cdn-images.mailchimp.com': 1,
 'instagram.com': 1
 };
 
-var proxy = "SOCKS5 192.168.1.88:1080";
+var proxy = "PROXY 192.168.10.100:2080";
+//var proxy = "SOCKS5 192.168.10.100:9150";
 
 var direct = 'DIRECT;';
 

@@ -4,6 +4,7 @@ DIR=`pwd`
 
 [ -f $DIR/git_template ] && git config --global init.templatedir $DIR/git_template
 
+git config --global core.ignorecase false
 git config --global user.email 'xudejian2008@gmail.com'
 git config --global user.name 'Dejian Xu'
 

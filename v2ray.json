@@ -1,6 +1,6 @@
 {
 	"log": {
-		"loglevel": "warning"
+		"loglevel": "info"
 	},
 	"inbound": {
 		"port": 1080,
@@ -19,27 +19,50 @@
 		}
 	],
 	"outbound": {
-		"protocol": "vmess",
+		"protocol": "socks",
 		"settings": {
-			"vnext": [
-				{
-					"address": "mylinode",
-					"port": 26213,
-					"users": [
-						{
-							"id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
-							"alterId": 64,
-							"security": "auto"
-						}
-					]
-				}
-			]
-		},
-    "mux": {
-      "enabled": true
-    }
+			"servers": [{
+				"address": "127.0.0.1",
+				"port": 9150
+			}]
+		}
 	},
 	"outboundDetour": [
+		{
+			"protocol": "vmess",
+			"tag": "tag-vmess",
+			"settings": {
+				"vnext": [
+					{
+						"address": "mylinode",
+						"port": 26213,
+						"users": [
+							{
+								"id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
+								"alterId": 1000,
+								"security": "auto"
+							}
+						]
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "kcp"
+			},
+			"mux": {
+				"enabled": true
+			}
+		},
+		{
+			"protocol": "socks",
+			"tag": "tor",
+			"settings": {
+				"servers": [{
+					"address": "127.0.0.1",
+					"port": 9150
+				}]
+			}
+		},
 		{
 			"protocol": "freedom",
 			"settings": {},
@@ -66,89 +89,68 @@
 			"dl-ssl.google.com": "203.208.39.230"
 		},
 		"servers": [
-			"localhost"
+			"8.8.8.8",
+			"114.114.114.114"
 		]
 	},
 	"routing": {
 		"strategy": "rules",
 		"settings": {
-			"domainStrategy": "IPIfNonMatch",
+			"domainStrategy": "AsIs",
 			"rules": [
-        {
-          "type": "field",
-          "port": "1-52",
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "port": "54-79",
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "port": "81-442",
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",
-          "port": "444-65535",
-          "outboundTag": "direct"
-        },
-				{
-          "type": "field",
-          "domain": [
-            "autoforce.net",
-            "qq.com",
-            "github.com",
-            "china",
-            "baidu.com",
-            ".cn"
-          ],
-          "outboundTag": "direct"
-        },
-				{
-					"type": "chinasites",
-					"outboundTag": "direct"
-				},
-        {
-          "type": "field",
-          "ip": [
-            "0.0.0.0/8",
-            "10.0.0.0/8",
-            "100.64.0.0/10",
-            "127.0.0.0/8",
-            "169.254.0.0/16",
-            "172.16.0.0/12",
-            "192.0.0.0/24",
-            "192.0.2.0/24",
-            "192.168.0.0/16",
-            "198.18.0.0/15",
-            "198.51.100.0/24",
-            "203.0.113.0/24",
-            "::1/128",
-            "fc00::/7",
-            "fe80::/10"
-          ],
-          "outboundTag": "direct"
-        },
 				{
 					"type": "field",
 					"domain": [
+						"autoforce.net",
+						"d.pcs.baidu.com"
+					],
+					"outboundTag": "direct"
+				},
+				{
+					"type": "field",
+					"domain": [
+						"c3.pcs.baidu.com",
+						"pcs.baidu.com",
 						"msg.71.am",
 						"17un.co"
 					],
 					"outboundTag": "adblock"
 				},
 				{
-          "type": "chinaip",
-          "outboundTag": "direct"
-        }
+					"type": "chinasites",
+					"outboundTag": "direct"
+				},
+				{
+					"type": "field",
+					"ip": [
+						"0.0.0.0/8",
+						"10.0.0.0/8",
+						"100.64.0.0/10",
+						"127.0.0.0/8",
+						"169.254.0.0/16",
+						"172.16.0.0/12",
+						"192.0.0.0/24",
+						"192.0.2.0/24",
+						"192.168.0.0/16",
+						"198.18.0.0/15",
+						"198.51.100.0/24",
+						"203.0.113.0/24",
+						"::1/128",
+						"fc00::/7",
+						"fe80::/10"
+					],
+					"outboundTag": "direct"
+				},
+				{
+					"type": "chinaip",
+					"outboundTag": "direct"
+				}
 			]
 		}
 	},
 	"transport": {
 		"kcpSettings": {
-			"uplinkCapacity": 1,
+			"uplinkCapacity": 2,
 			"downlinkCapacity": 100
 		}
 	}

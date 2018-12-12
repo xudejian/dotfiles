@@ -41,6 +41,8 @@ Thumbs.db
 coverage.html
 .idea
 node_modules/
+!migrations/
+!migrations/**/*.sql
 .scrapy/
 .session
 *.pyc

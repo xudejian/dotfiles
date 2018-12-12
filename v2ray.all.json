@@ -1,0 +1,44 @@
+{
+	"log": {
+		"loglevel": "info"
+	},
+	"inbound": {
+		"port": 1080,
+		"protocol": "socks",
+		"settings": {
+			"auth": "noauth",
+			"udp": false,
+			"ip": "127.0.0.1"
+		}
+	},
+	"outbound": {
+		"protocol": "vmess",
+		"settings": {
+			"vnext": [
+				{
+					"address": "mylinode",
+					"port": 26213,
+					"users": [
+						{
+							"id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
+							"alterId": 1000,
+							"security": "auto"
+						}
+					]
+				}
+			]
+		},
+    "streamSettings": {
+      "network": "kcp"
+    },
+    "mux": {
+      "enabled": true
+    }
+	},
+	"transport": {
+		"kcpSettings": {
+			"uplinkCapacity": 2,
+			"downlinkCapacity": 100
+		}
+	}
+}

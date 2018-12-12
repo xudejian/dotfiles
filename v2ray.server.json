@@ -13,24 +13,14 @@
           "id": "C8D5D793-4B53-4A06-9298-CFE6B6EB894C",
 					"email": "c8d@v2ray.com",
           "level": 1,
-          "alterId": 64
+          "alterId": 1000
         }
       ]
     },
 		"streamSettings": {
+			"network": "kcp"
 		}
   },
-	"inboundDetour": [
-		{
-      "protocol": "shadowsocks",
-      "port": 443,
-      "settings": {
-        "method": "aes-256-cfb",
-        "password": "1488418943",
-        "udp": false
-      }
-    }
-	],
   "outbound": {
     "protocol": "freedom",
     "settings": {}
@@ -66,7 +56,7 @@
   "transport": {
     "kcpSettings": {
       "uplinkCapacity": 2,
-      "downlinkCapacity": 10
+      "downlinkCapacity": 100
     }
   }
 }
