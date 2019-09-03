@@ -35,8 +35,8 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONF
 export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://mirrors.tuna.tsinghua.edu.cn/flutter
+export PUB_HOSTED_URL=https://mirrors.tuna.tsinghua.edu.cn/dart-pub
 
 export PATH=$PATH:$ANDROID_HOME/platform-tools:/usr/local/share/flutter/bin
 
