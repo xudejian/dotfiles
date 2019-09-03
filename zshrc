@@ -20,15 +20,16 @@ DISABLE_UPDATE_PROMPT=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git golang tmux docker)
+plugins=(git tmux autojump)
 
 # Customize to your needs...
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export GOPATH=$HOME/go
+export GOPROXY=https://goproxy.io
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/anaconda3/bin:node_modules/.bin:$PATH
-export PATH=$HOME/src/dotfiles/bin:$GOPATH/bin:$HOME/.yarn/bin:$HOME/.local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$PATH:$HOME/src/dotfiles/bin:$GOPATH/bin:$HOME/.yarn/bin:$HOME/.local/bin:node_modules/.bin
 
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 export ANDROID_SDK_ROOT=/usr/local/share/android-sdk

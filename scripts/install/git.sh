@@ -6,7 +6,7 @@ DIR=`pwd`
 
 git config --global core.ignorecase false
 git config --global user.email 'xudejian2008@gmail.com'
-git config --global user.name 'Dejian Xu'
+git config --global user.name 'xudejian'
 
 git config --global color.status auto
 git config --global color.diff auto
