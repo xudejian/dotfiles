@@ -1,13 +1,13 @@
 #!/bin/bash
 main() {
 	REMOTEPATH="$(git config --local remote.$1.path)"
-  if test "$REMOTEPATH" = ''
-  then
+	if test "$REMOTEPATH" = ''
+	then
 		echo "body, you need set remote.$1.path=your remote project path"
 		return
-  else
-		git ls-files -m | xargs -I {} scp {} $REMOTEPATH/{}
-  fi
+	else
+		git ls-files -m | xargs -I {} rsync -avz {} $REMOTEPATH/{}
+	fi
 }
 
 main "$@"
