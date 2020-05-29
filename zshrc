@@ -20,7 +20,7 @@ DISABLE_UPDATE_PROMPT=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git tmux autojump)
+plugins=(git tmux)
 
 # Customize to your needs...
 export LC_ALL=en_US.UTF-8
@@ -54,7 +54,6 @@ unproxy() {
 }
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-[ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export DBNAME="cheshi"
@@ -63,3 +62,5 @@ LS_COLORS='no=00:fi=00:di=36:ow=34;47:ln=35:pi=30;44:so=35;44:do=35;44:bd=33;44:
 export LS_COLORS
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

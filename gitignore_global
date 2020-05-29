@@ -53,3 +53,8 @@ node_modules/
 cscope.*
 Temp/
 obj/
+tags
+tags.*
+GPATH
+GRTAGS
+GTAGS

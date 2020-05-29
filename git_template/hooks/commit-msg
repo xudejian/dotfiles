@@ -1,6 +1,0 @@
-#!/bin/sh
-CHAR_NUM=$(awk '/^[^#]/{ sub("^[ ]*", "", $0); sub("[ ]*$", "", $0); char_num += length($0);}END{print char_num;}' $1)
-if [ $CHAR_NUM -lt "8" ]; then
-	echo '来写一个漂亮的注释吧，8个以上汉字！'
-	exit 1;
-fi

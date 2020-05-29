@@ -5,9 +5,26 @@ main() {
 	then
 		echo "body, you need set remote.$1.path=your remote project path"
 		return
-	else
-		git ls-files -m | xargs -I {} rsync -avz {} $REMOTEPATH/{}
 	fi
+	shift
+	if [[ $# != 0 ]]; then
+		while [[ $# != 0 ]]; do
+			if [ -f "$1" ]; then
+				DIR=$(dirname $1)
+				FILE=$(basename $1)
+				cd $DIR
+				TODIR=$(git rev-parse --show-prefix)
+				cd -
+				echo rsync -avz --progress $1 $REMOTEPATH/$TODIR$FILE
+				rsync -avz --progress $1 $REMOTEPATH/$TODIR$FILE
+			fi
+			shift
+		done
+		return
+	fi
+	cd $(git rev-parse --show-toplevel)
+	git ls-files -m | xargs -I {} echo rsync -avz {} $REMOTEPATH/{}
+	git ls-files -m | xargs -I {} rsync --progress -avz {} $REMOTEPATH/{}
 }
 
 main "$@"
