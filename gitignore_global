@@ -26,6 +26,7 @@
 *.log
 *.sql
 *.sqlite
+*.db
 
 # OS generated files #
 ######################
@@ -35,8 +36,7 @@
 .Spotlight-V100
 .Trashes
 Icon?
-ehthumbs.db
-Thumbs.db
+*.db
 *.iml
 coverage.html
 .idea
@@ -58,3 +58,9 @@ tags.*
 GPATH
 GRTAGS
 GTAGS
+
+android/.project
+android/.settings/
+android/app/.classpath
+android/app/.project
+android/app/.settings/

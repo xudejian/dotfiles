@@ -1,0 +1,8 @@
+[Unit]
+Description=Caddy server
+[Service]
+ExecStart=/usr/local/bin/caddy -conf=/etc/caddy/Caddyfile -agree=true
+Restart=always
+User=root
+[Install]
+WantedBy=multi-user.target

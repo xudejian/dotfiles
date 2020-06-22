@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 [ -f ~/.tmux.conf ] || ln -s $PWD/tmux.conf ~/.tmux.conf
 [ -f ~/.ctags ] || ln -s $PWD/ctags.conf ~/.ctags
