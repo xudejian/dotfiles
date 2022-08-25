@@ -27,6 +27,8 @@
 *.sql
 *.sqlite
 *.db
+*.db-shm
+*.db-wal
 
 # OS generated files #
 ######################
@@ -36,10 +38,11 @@
 .Spotlight-V100
 .Trashes
 Icon?
-*.db
 *.iml
 coverage.html
 .idea
+build/
+gen/
 node_modules/
 !migrations/
 !migrations/**/*.sql
@@ -58,6 +61,7 @@ tags.*
 GPATH
 GRTAGS
 GTAGS
+go.sum
 
 android/.project
 android/.settings/

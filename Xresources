@@ -1,0 +1,18 @@
+#include "src/dotfiles/gruvbox-dark.xresources"
+
+xterm*termName: xterm-256color
+xterm*faceName: Cascadia Code PL
+xterm*faceSize: 14
+xterm*selectToClipboard: true
+XTerm*VT100.translations: #override \
+        Shift Ctrl<Key>V: insert-selection(CLIPBOARD) \n\
+        Shift Ctrl<Key>V: insert-selection(PRIMARY) \n\
+        Ctrl <Key> minus: smaller-vt-font() \n\
+        Ctrl <Key> plus: larger-vt-font()
+
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcdfilter
